@@ -27,6 +27,7 @@ button:disabled{cursor:default}
 .primary{padding:12px 20px;border-radius:14px;background:var(--green);color:#fff;font-weight:700}
 .primary:disabled{opacity:.4}
 .danger{color:var(--red);margin-top:16px}
+.big-warn{font-size:16px;border:2px solid var(--red)}
 .warn{background:var(--red2);color:var(--ink);border-radius:12px;padding:10px 12px;font-size:14px;margin-bottom:12px}
 .hero{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
 .stat{background:var(--card);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow)}.stat b{font-size:24px;display:block}.stat span{font-size:13px;color:var(--mute)}
@@ -51,6 +52,8 @@ button:disabled{cursor:default}
 .fc{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:8px;background:var(--card);border-radius:14px;padding:10px 12px;box-shadow:var(--shadow)}
 .fc-ko{text-align:left;font-size:20px;font-weight:700}.fc-zh{font-size:13px;padding:6px 10px;border-radius:10px;background:var(--green2)}.fc-m{grid-column:1/-1;color:var(--mute);font-size:15px}
 .fc .btn-slow{grid-row:1;grid-column:3}
+.picq{font-size:96px;text-align:center;line-height:1.2;margin:8px 0}
+.fc-pic{font-size:28px;margin-right:10px;vertical-align:middle}
 .say{display:flex;gap:10px;justify-content:center;margin:8px 0}
 .btn-audio,.btn-slow{min-width:52px;height:52px;border-radius:16px;background:var(--green);color:#fff;font-size:22px;padding:0 12px}
 .btn-slow{background:var(--green2);color:var(--ink)}
@@ -99,17 +102,6 @@ const LESSONS = [
    "注意：ㅓ 嘴张大、不圆唇；ㅡ 嘴角拉平；ㄹ 舌尖轻轻弹一下；시 ≈ xi"],
   w:["아이|孩子","오이|黄瓜","우유|牛奶","모자|帽子","나비|蝴蝶","구두|皮鞋","나무|树","허리|腰","바나나|香蕉","라디오|收音机","아버지|爸爸","어머니|妈妈","기자|记者","가수|歌手","부모|父母","도로|道路","지도|地图","호수|湖水"],
   p:[["아","어"],["오","우"],["으","이"],["나","라"],["마","바"],["사","자"]],
-  q:[
-   ["韩国语的基本语序是？","主语 + 宾语 + 谓语（SOV）","主语 + 谓语 + 宾语（SVO）","谓语 + 主语 + 宾语"],
-   ["关于声调，下列哪句正确？","韩语没有声调，汉语有","韩语和汉语都有声调","韩语有声调，汉语没有"],
-   ["“저는 엄마를 사랑해요”里，“을/를”标记的是？","宾语","主语","话题","地点"],
-   ["创制韩文的人是谁？","世宗大王","李舜臣","太祖","正祖"],
-   ["韩文是哪一年创制的？","1443年","1392年","1592年","1910年"],
-   ["韩文节（한글날）是几月几日？","10月9日","5月5日","1月1日","12月25日"],
-   ["元音开头的音节，前面要写的“占位”辅音是？","ㅇ","ㅎ","ㄴ","ㅁ"],
-   ["基本元音有几个？","6个","4个","8个","10个"],
-   ["基本辅音有几个？","10个","6个","8个","14个"],
-   ["汉字和韩文的共同点是？","都是把字写进一个方块里","都是表音文字","都用声调区分意思"]]
 },
 { n:2, ko:"한글 (2)", zh:"韩文(2)：复合元音·送气音·紧音", taught:true,
   tips:[
@@ -121,10 +113,6 @@ const LESSONS = [
   p:[["가","카","까"],["다","타","따"],["바","파","빠"],["자","차","짜"],["사","싸"],["고리","꼬리"],["요리","오리"],["거미","개미"],["보도","포도"],["부리","뿌리"],["타다","따다"],["차다","짜다"],["거기","고기"]],
   s:["어서 오세요!|欢迎光临！","커피 주세요.|请给我咖啡。","아이스 커피요?|冰咖啡吗？","네! 치즈 케이크도 주세요.|对！也请给我奶酪蛋糕。"],
   q:[
-   ["“ㅑ”是在哪个元音上加一笔构成的？","ㅏ","ㅓ","ㅗ","ㅜ"],
-   ["现代首尔话里，“ㅐ”和“ㅔ”的发音关系是？","几乎相同","完全不同","只用 ㅐ","只用 ㅔ"],
-   ["纸巾测试：紧音（如“까”）的特点是？","纸巾几乎不动","纸巾大幅摆动","纸巾轻轻摆动"],
-   ["가 · 카 · 까 三者中，送气最强的是？","카","가","까"],
    ["“기차”的意思是？","火车","汽车","地铁"],
    ["“시계”的意思是？","钟表","眼镜","手机"],
    ["“오빠”是谁对谁的称呼？","女生称呼哥哥","男生称呼姐姐","称呼弟弟"]]
@@ -139,7 +127,6 @@ const LESSONS = [
      "시청|市厅（地铁站）","동대문|东大门（地铁站）","강남|江南（地铁站）","신촌|新村（地铁站）","잠실|蚕室（地铁站）","명동|明洞（地铁站）","안국|安国（地铁站）","혜화|惠化（地铁站）","광화문|光化门（地铁站）","여의도|汝矣岛（地铁站）","이태원|梨泰院（地铁站）","경복궁|景福宫（地铁站）"],
   p:[["방","밖"],["곧","공"],["시작","시장"],["얼마","엄마"],["사랑","사람"],["산","상"],["책","채"],["밥","박"],["곰","공"]],
   q:[
-   ["“와”是由哪两个元音组合而成的？","ㅗ + ㅏ","ㅜ + ㅓ","ㅗ + ㅐ","ㅡ + ㅣ"],
    ["“의사”（医生）的“의”在词首怎么读？","[의] ui","[이] i","[에] e"],
    ["收音 ㄱ、ㅋ、ㄲ 都读作哪个音？","[ㄱ] k","[ㅋ]","[ㄲ]","不发音"],
    ["“옷、꽃”的收音都读作哪个音？","[ㄷ] t","[ㅅ]","[ㅊ]","[ㅈ]"],
@@ -390,11 +377,38 @@ const LESSONS = [
 }
 ];
 
+/* 单词图片（表情符号，免版权）。只给能用图片清楚表示的词。 */
+const PICS = {
+"아이":"👶","오이":"🥒","우유":"🥛","모자":"🧢","나비":"🦋","구두":"👞","나무":"🌳","바나나":"🍌","라디오":"📻","아버지":"👨","어머니":"👩","기자":"📰","가수":"🎤","도로":"🛣️","지도":"🗺️","호수":"🏞️",
+"야구":"⚾","휴지":"🧻","요가":"🧘","여자":"👧","해":"☀️","시계":"⏰","개구리":"🐸","코":"👃","기타":"🎸","카메라":"📷","치즈":"🧀","커피":"☕","토끼":"🐰","피아노":"🎹","토마토":"🍅","찌개":"🍲","코끼리":"🐘","쓰레기":"🗑️","기차":"🚆","요리":"🍳","오리":"🦆","우표":"📮",
+"사과":"🍎","샤워":"🚿","돼지":"🐷","회사":"🏢","귀":"👂","의자":"🪑","키위":"🥝","가위":"✂️","의사":"👨‍⚕️","책":"📕","미국":"🇺🇸","돈":"💵","신문":"📰","옷":"👕","꽃":"🌸","물":"💧","딸기":"🍓","곰":"🐻","집":"🏠","지갑":"👛","가방":"🎒","빵":"🍞",
+"좋아요":"👍","몰라요":"🤷","앉으세요":"🪑","쓰세요":"✍️","읽으세요":"📖","들으세요":"👂","보세요":"👀","쉬세요":"😌","오 층":"🏢","팔 번 버스":"🚌",
+"한국":"🇰🇷","중국":"🇨🇳","일본":"🇯🇵","영국":"🇬🇧","독일":"🇩🇪","호주":"🇦🇺","인도":"🇮🇳","프랑스":"🇫🇷","러시아":"🇷🇺","베트남":"🇻🇳","브라질":"🇧🇷","태국":"🇹🇭","몽골":"🇲🇳","학생":"🧑‍🎓","친구":"🧑‍🤝‍🧑",
+"선생님":"👩‍🏫","회사원":"👔","군인":"🪖","경찰":"👮","요리사":"👨‍🍳","간호사":"👩‍⚕️","변호사":"⚖️","연구원":"🔬",
+"공책":"📓","볼펜":"🖊️","창문":"🪟","휴대폰":"📱","노트북":"💻","컴퓨터":"🖥️","우산":"☂️","거울":"🪞","열쇠":"🔑","명함":"📇","사진":"🖼️","안경":"👓","카드":"💳","사전":"📚",
+"아메리카노":"☕","카페라테":"☕","아이스커피":"🧊","홍차":"🍵","녹차":"🍵","오렌지 주스":"🍊","사과 주스":"🍎","포도 주스":"🍇","케이크":"🍰","쿠키":"🍪","샌드위치":"🥪","샐러드":"🥗",
+"비빔밥":"🍚","불고기":"🥩","냉면":"🍜","김치":"🥬","김밥":"🍙","떡볶이":"🌶️","라면":"🍜","밥":"🍚","햄버거":"🍔","피자":"🍕","스파게티":"🍝","치킨":"🍗","콜라":"🥤","사이다":"🥤","맥주":"🍺","소주":"🍶","만두":"🥟",
+"빵 한 개":"🍞","콜라 한 병":"🥤","커피 한 잔":"☕","치킨 한 마리":"🍗",
+"자다":"😴","먹다":"🍽️","마시다":"🥤","보다":"👀","읽다":"📖","사다":"🛍️","만나다":"🤝","배우다":"🧑‍🎓","가르치다":"👩‍🏫","일하다":"💼","공부하다":"📚","운동하다":"🏃","노래하다":"🎤","전화하다":"📞","이야기하다":"💬","좋아하다":"❤️",
+"자요":"😴","먹어요":"🍽️","마셔요":"🥤","봐요":"👀","읽어요":"📖","배워요":"🧑‍🎓","공부해요":"📚","운동해요":"🏃",
+"학교":"🏫","식당":"🍽️","커피숍":"☕","공원":"🌳","시장":"🧺","백화점":"🏬","서점":"📚","은행":"🏦","도서관":"📚","대사관":"🏛️","병원":"🏥","공항":"✈️","극장":"🎬","화장실":"🚻",
+"싸다":"💰","비싸다":"💎","맛있다":"😋","맛없다":"🤢","재미있다":"😆","재미없다":"🥱","따뜻하다":"🌤️","시원하다":"🍃","복잡하다":"👥","친절하다":"😊",
+"귤":"🍊","수박":"🍉","당근":"🥕","감자":"🥔","달걀":"🥚","비누":"🧼","샴푸":"🧴","칫솔":"🪥",
+"한 시":"🕐","두 시":"🕑","세 시":"🕒","네 시":"🕓","다섯 시":"🕔","열두 시":"🕛","아침":"🌅","점심":"🌞","저녁":"🌆","주말":"🎉",
+"시험":"📝","방학":"🏖️","생일":"🎂","약속":"🤙","세일":"🏷️","들었어요":"🎧","걸었어요":"🚶",
+"맑다":"☀️","흐리다":"☁️","비가 오다":"🌧️","눈이 오다":"🌨️","덥다":"🥵","춥다":"🥶","봄":"🌸","여름":"🏖️","가을":"🍁","겨울":"⛄","더워요":"🥵","추워요":"🥶","매워요":"🌶️","귀여워요":"🐶","무거워요":"🏋️","날씨":"🌦️",
+"위":"⬆️","아래":"⬇️","밑":"⬇️","침대":"🛏️","책장":"📚","쓰레기통":"🗑️","에어컨":"❄️","왼쪽":"⬅️","오른쪽":"➡️"
+};
+
 </script>
 <script>
 /* ===== 韩语每日练 · 应用逻辑 ===== */
 (function(){
 "use strict";
+/* 应用内浏览器：KakaoTalk 自动跳到外部浏览器；微信显示提示 */
+const UA = navigator.userAgent || "";
+const IN_KAKAO = /KAKAOTALK/i.test(UA), IN_WECHAT = /MicroMessenger/i.test(UA);
+if (IN_KAKAO) { try { location.href = "kakaotalk://web/openExternal?url=" + encodeURIComponent(location.href); } catch(e) {} }
 const $ = (s, r=document) => r.querySelector(s);
 const app = $("#app");
 new MutationObserver(()=>window.scrollTo(0,0)).observe(app,{childList:true});
@@ -441,9 +455,12 @@ function makeQ(item){
   if (item.k==="q") return {item, type:"mcq", prompt:item.q, opts:shuffle([item.a,...item.d]), ans:item.a};
   if (item.k==="p") { const t = item.opts[Math.floor(Math.random()*item.opts.length)]; return {item, type:"pair", say:t, opts:item.opts.slice(), ans:t}; }
   if (item.k==="w") {
-    const types = ["listen","ko2zh","zh2ko"];
+    const pic = PICS[item.ko];
+    const types = ["listen","ko2zh","zh2ko"]; if (pic) types.push("pic","pic");
     if (isHangulOnly(item.ko) && item.ko.length>=2) types.push("spell");
     const t = types[Math.floor(Math.random()*types.length)];
+    if (t==="pic") { const used=new Set([pic]); const ds=[]; for (const x of shuffle(pool(item,"w"))) { const pp=PICS[x.ko]; if (pp && !used.has(pp) && !ds.includes(x.ko) && x.ko!==item.ko) { used.add(pp); ds.push(x.ko); } if (ds.length>=3) break; }
+      if (ds.length>=2) return {item,type:"pic",pic,opts:shuffle([item.ko,...ds]),ans:item.ko}; }
     if (t==="listen") return {item,type:"listen",say:item.ko,opts:shuffle([item.ko,...distract(item,"w","ko",3)]),ans:item.ko};
     if (t==="ko2zh") return {item,type:"ko2zh",say:item.ko,opts:shuffle([item.zh,...distract(item,"w","zh",3)]),ans:item.zh};
     if (t==="zh2ko") return {item,type:"zh2ko",opts:shuffle([item.ko,...distract(item,"w","ko",3)]),ans:item.ko};
@@ -496,10 +513,21 @@ function liveStreak(){ if (!S.last) return 0; const gap = dayNum(today())-dayNum
 
 /* ---------- 语音 ---------- */
 let KO_VOICE = null;
-const hasTTS = "speechSynthesis" in window;
+const hasTTS = !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
 function loadVoices(){ if(!hasTTS) return; const v = speechSynthesis.getVoices(); KO_VOICE = v.find(x=>/^ko/i.test(x.lang) && /google|yuna|nara|heami|sunhi/i.test(x.name)) || v.find(x=>/^ko/i.test(x.lang)) || null; }
 if (hasTTS) { loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
+/* 预先录好的自然语音（audio/xxxxxxxx.mp3）；没有时用浏览器语音 */
+function fnv(str){ let h=0x811c9dc5; for (const b of new TextEncoder().encode(str)) { h^=b; h=Math.imul(h,0x01000193)>>>0; } return ("0000000"+h.toString(16)).slice(-8); }
+let AUDIO = null, curAudio = null;
+try { fetch("audio/index.json",{cache:"no-cache"}).then(r=>r.ok?r.json():null).then(j=>{ if(j&&j.length){ AUDIO=new Set(j); const w=document.getElementById("vw"); if(w) w.remove(); } }).catch(()=>{}); } catch(e) {}
+const hasAudio = () => !!AUDIO;
 function speak(text, slow){
+  const t = text.replace(/_+/g," ").trim();
+  if (AUDIO && AUDIO.has(fnv(t))) {
+    try { if (curAudio) curAudio.pause(); if (hasTTS) speechSynthesis.cancel(); } catch(e) {}
+    const a = new Audio("audio/"+fnv(t)+".mp3"); a.playbackRate = slow ? 0.7 : (S.tts/0.85); try { a.preservesPitch = true; } catch(e) {}
+    curAudio = a; a.play().catch(()=>{}); return;
+  }
   if (!hasTTS) { toast("这个浏览器不能播放声音，请用 Chrome 或 Safari 打开"); return; }
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text.replace(/_+/g," "));
@@ -520,13 +548,14 @@ document.addEventListener("click", e=>{
 
 /* ---------- 首页 ---------- */
 function home(){
-  speechSynthesis && hasTTS && speechSynthesis.cancel();
+  if (hasTTS) try { speechSynthesis.cancel(); } catch(e) {}
   const st = liveStreak(); const todayXP = S.days[today()]||0;
   const pct = Math.min(100, Math.round(todayXP/S.goal*100));
   const studied = studiedLessons();
   const due = dueCount(studied.length?studied:[1,2,3,4,5,6,7,8,9,10]);
-  const warn = !hasTTS ? `<div class="warn">⚠ 这个浏览器不能播放韩语声音。如果在微信里打开，请点右上角 “···” → 用浏览器打开。</div>`
-            : (!KO_VOICE ? `<div class="warn" id="vw">⚠ 还没有找到韩语语音。点一下 🔊 试试；如果没有声音，请用 Chrome（安卓）或 Safari（苹果）打开。</div>` : "");
+  const inapp = IN_WECHAT ? `<div class="warn big-warn">👉 微信里可能听不到声音。请点右上角 <b>“···”</b> → <b>“在浏览器打开”</b>。</div>` : "";
+  const warn = inapp + (hasAudio() ? "" : !hasTTS ? `<div class="warn">⚠ 这个浏览器不能播放韩语声音。如果在微信里打开，请点右上角 “···” → 用浏览器打开。</div>`
+            : (!KO_VOICE ? `<div class="warn" id="vw">⚠ 还没有找到韩语语音。点一下 🔊 试试；如果没有声音，请用 Chrome（安卓）或 Safari（苹果）打开。</div>` : ""));
   app.innerHTML = `
   <header class="top"><div class="brand">韩语每日练<small>매일 한국어</small></div><button class="ghost" id="help">使用方法</button></header>
   ${warn}
@@ -578,7 +607,7 @@ function cards(n){
   const list = BY_LESSON[n].filter(x=>x.k==="w"||x.k==="s");
   app.innerHTML = `<header class="top"><button class="ghost" id="back">← 返回</button><div class="brand sm">第${n}课 单词卡</div><span></span></header>
   <p class="hint">点卡片听发音，点 “中文” 看意思。</p>
-  <div class="cardlist">${list.map(x=>`<div class="fc"><button class="fc-ko" data-say="${esc(x.ko)}">${esc(x.ko)}</button><button class="fc-zh">中文</button><span class="fc-m" hidden>${esc(x.zh)}</span><button class="btn-slow" data-slow="${esc(x.ko)}">🐢</button></div>`).join("")}</div>`;
+  <div class="cardlist">${list.map(x=>`<div class="fc"><button class="fc-ko" data-say="${esc(x.ko)}">${PICS[x.ko]?`<span class="fc-pic">${PICS[x.ko]}</span>`:""}${esc(x.ko)}</button><button class="fc-zh">中文</button><span class="fc-m" hidden>${esc(x.zh)}</span><button class="btn-slow" data-slow="${esc(x.ko)}">🐢</button></div>`).join("")}</div>`;
   $("#back").onclick = ()=>lesson(n);
   app.querySelectorAll(".fc-zh").forEach(b=>b.onclick=()=>{ const m=b.nextElementSibling; m.hidden=!m.hidden; b.hidden=!m.hidden?true:false; });
 }
@@ -632,7 +661,7 @@ function speakMode(n){
 }
 
 /* ---------- 练习 ---------- */
-const LABEL = { mcq:"选择正确答案", pair:"听一听：是哪一个？", listen:"听一听：是哪个词？", ko2zh:"这是什么意思？", zh2ko:"用韩语怎么说？", spell:"听写：按顺序点音节", order:"排句子：按顺序点词", listen2zh:"听句子，选意思" };
+const LABEL = { mcq:"选择正确答案", pair:"听一听：是哪一个？", listen:"听一听：是哪个词？", ko2zh:"这是什么意思？", zh2ko:"用韩语怎么说？", spell:"听写：按顺序点音节", order:"排句子：按顺序点词", listen2zh:"听句子，选意思", pic:"看图：用韩语怎么说？" };
 function quiz(items, title, backLesson){
   if (!items.length) { toast("没有题目"); return; }
   let queue = items.map(makeQ), idx = 0, correct = 0, xp = 0; const retried = new Set(); const wrong = [];
@@ -641,10 +670,11 @@ function quiz(items, title, backLesson){
     let body = "";
     if (Q.type==="mcq") body = `<p class="prompt">${esc(Q.prompt)}</p>`;
     else if (Q.type==="zh2ko") body = `<p class="prompt big">${esc(Q.item.zh)}</p>`;
+    else if (Q.type==="pic") body = `<div class="picq">${Q.pic}</div>`;
     else if (Q.type==="ko2zh") body = `<p class="prompt big ko">${esc(Q.item.ko)}</p>${audioBtns(Q.say)}`;
     else body = `<div class="bigplay">${audioBtns(Q.say)}</div>${Q.type==="order"?`<p class="prompt">${esc(Q.item.zh)}</p>`:""}`;
     let ans = "";
-    if (Q.opts) ans = `<div class="opts ${Q.type==="pair"||Q.type==="listen"||Q.type==="zh2ko"?"ko":""}">${Q.opts.map(o=>`<button class="opt" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div>`;
+    if (Q.opts) ans = `<div class="opts ${Q.type==="pair"||Q.type==="listen"||Q.type==="zh2ko"||Q.type==="pic"?"ko":""}">${Q.opts.map(o=>`<button class="opt" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div>`;
     else ans = `<div class="built" id="built"></div><div class="tiles">${Q.tiles.map((t,j)=>`<button class="tile" data-j="${j}">${esc(typeof t==="string"?t:t.c)}</button>`).join("")}</div><div class="row"><button class="ghost" id="undo">↩ 撤回</button><button class="primary" id="check" disabled>检查</button></div>`;
     app.innerHTML = `<header class="top"><button class="ghost" id="quit">✕</button><div class="prog"><i style="width:${idx/total*100}%"></i></div><span class="cnt">${idx+1}/${total}</span></header>
       <section class="q"><p class="lbl">${LABEL[Q.type]} <small>· 第${Q.item.L}课</small></p>${body}${ans}</section><div id="fb" class="fb"></div>`;
@@ -668,11 +698,11 @@ function quiz(items, title, backLesson){
     if (first) { grade(Q.item, ok); if (ok) { correct++; xp+=2; } else wrong.push(Q.item); }
     else if (ok) xp+=1;
     if (!ok && first) { retried.add(Q.item.id); queue.push(makeQ(Q.item)); }
-    const info = Q.item.ko ? `<p class="fb-ko">${esc(Q.item.ko)} <button class="btn-audio sm" data-say="${esc(Q.item.ko)}">🔊</button></p><p class="fb-zh">${esc(Q.item.zh)}</p>` : `<p class="fb-zh">正确答案：<b>${esc(Q.ans)}</b></p>`;
+    const info = Q.item.ko ? `<p class="fb-ko">${PICS[Q.item.ko]?PICS[Q.item.ko]+" ":""}${esc(Q.item.ko)} <button class="btn-audio sm" data-say="${esc(Q.item.ko)}">🔊</button></p><p class="fb-zh">${esc(Q.item.zh)}</p>` : `<p class="fb-zh">正确答案：<b>${esc(Q.ans)}</b></p>`;
     const fb = $("#fb");
     fb.className = "fb on "+(ok?"good":"bad");
     fb.innerHTML = `<p class="fb-t">${ok?"✔ 答对了！":"✘ 再记一下"}</p>${info}${!ok&&first?`<p class="fb-n">这道题等一下会再出现</p>`:""}<button class="primary" id="go">继续</button>`;
-    if (ok && Q.item.ko && Q.type!=="listen" && Q.type!=="pair") speak(Q.item.ko,false);
+    if (ok && Q.item.ko && Q.type!=="listen" && Q.type!=="pair" && Q.type!=="spell" && Q.type!=="order") speak(Q.item.ko,false);
     $("#go").onclick = ()=>{ idx++; idx<queue.length ? draw() : result(); };
   }
   function result(){
@@ -711,7 +741,7 @@ function help(){
   $("#reset").onclick = ()=>{ if (confirm("确定要清除全部学习记录吗？")) { S={ xp:0, streak:0, best:0, last:"", days:{}, srs:{}, lessons:{}, goal:30, tts:0.85 }; save(); home(); } };
 }
 
-home();
+try { home(); } catch(e) { app.innerHTML = '<div class="warn">打开失败，请用 Chrome（安卓）或 Safari（苹果）打开这个网址。<br><small>'+esc(e.message)+'</small></div>'; }
 if ("serviceWorker" in navigator && location.protocol==="https:" && !/claude/.test(location.hostname)) {
   navigator.serviceWorker.register("sw.js").catch(()=>{});
 }
