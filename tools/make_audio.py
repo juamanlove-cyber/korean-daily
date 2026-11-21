@@ -12,6 +12,8 @@ async def one(h, text, sem):
                 print("retry", h, repr(e)[:200], flush=True); await asyncio.sleep(2 + attempt * 3)
 async def main():
     rows = [l.rstrip("\n").split("\t", 1) for l in open("audio/list.tsv", encoding="utf8") if "\t" in l]
+    # 먼저 한 개로 연결 확인 (실패하면 바로 중단)
+    await asyncio.wait_for(edge_tts.Communicate("안녕하세요?", VOICE).save("/tmp/probe.mp3"), 40)
     sem = asyncio.Semaphore(4)
     await asyncio.gather(*(one(h, t, sem) for h, t in rows))
     ok = sorted(h for h, _ in rows if os.path.exists(f"audio/{h}.mp3") and os.path.getsize(f"audio/{h}.mp3") > 0)
