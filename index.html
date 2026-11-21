@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>韩语每日练</title>
+<meta name="description" content="零基础韩国语 第1–16课 每日复习：听力、单词、排句子、跟读">
+<meta name="theme-color" content="#2E6E5E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="韩语每日练">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" href="icon-192.png">
+<style>
+:root{--bg:#F6F3EC;--card:#FFFFFF;--ink:#1F2A2E;--mute:#6B7470;--green:#2E6E5E;--green2:#E3EEE9;--red:#C8452F;--red2:#F9E5E0;--gold:#B8862B;--cream:#F7EEDC;--line:#E4DED2;--shadow:0 1px 2px rgba(0,0,0,.06),0 2px 8px rgba(0,0,0,.05)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#141A1C;--card:#1E2629;--ink:#ECEAE4;--mute:#9AA39F;--green:#5FB39B;--green2:#22362F;--red:#E8755F;--red2:#3A2622;--gold:#D8AE5A;--cream:#2D281E;--line:#2E383B;--shadow:none}}
+:root[data-theme="dark"]{--bg:#141A1C;--card:#1E2629;--ink:#ECEAE4;--mute:#9AA39F;--green:#5FB39B;--green2:#22362F;--red:#E8755F;--red2:#3A2622;--gold:#D8AE5A;--cream:#2D281E;--line:#2E383B;--shadow:none}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Noto Sans SC",sans-serif;font-size:16px;line-height:1.5}
+#app{max-width:560px;margin:0 auto;padding:12px 16px 40px;min-height:100vh}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+button:disabled{cursor:default}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0 12px}
+.brand{font-weight:800;font-size:20px;color:var(--green)}.brand small{display:block;font-size:12px;font-weight:600;color:var(--mute)}.brand.sm{font-size:16px}
+.ghost{padding:8px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-size:14px}
+.primary{padding:12px 20px;border-radius:14px;background:var(--green);color:#fff;font-weight:700}
+.primary:disabled{opacity:.4}
+.danger{color:var(--red);margin-top:16px}
+.warn{background:var(--red2);color:var(--ink);border-radius:12px;padding:10px 12px;font-size:14px;margin-bottom:12px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.stat{background:var(--card);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow)}.stat b{font-size:24px;display:block}.stat span{font-size:13px;color:var(--mute)}
+.goal{grid-column:1/-1;background:var(--card);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow)}.goal span{font-size:13px;color:var(--mute)}
+.goalbar,.bar,.prog{height:10px;border-radius:99px;background:var(--line);overflow:hidden;display:block}.goalbar i,.bar i,.prog i{display:block;height:100%;background:var(--gold);border-radius:99px;transition:width .3s}
+.big{display:grid;gap:10px;margin-bottom:8px}
+.cta{display:flex;flex-direction:column;align-items:flex-start;padding:16px 18px;border-radius:18px;background:var(--green);color:#fff;text-align:left;box-shadow:var(--shadow)}.cta b{font-size:20px}.cta span{font-size:14px;opacity:.9}
+.cta.alt{background:var(--red)}
+.sec{font-size:17px;margin:22px 0 10px}.sec small{font-weight:500;color:var(--mute);font-size:13px;margin-left:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lcard{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;background:var(--card);border-radius:16px;padding:12px;box-shadow:var(--shadow);border:1px solid transparent;min-height:118px}
+.lcard .num{font-weight:800;color:var(--green);font-size:13px}.lcard.self .num{color:var(--gold)}
+.lcard .t{font-weight:700;font-size:14px;line-height:1.35}.lcard .k{font-size:12px;color:var(--mute)}.lcard .bar{width:100%;height:6px;margin-top:auto}
+.lcard.self{background:var(--cream)}
+.foot{margin-top:28px;font-size:12px;color:var(--mute);text-align:center}
+.lhead{background:var(--green2);border-radius:18px;padding:16px}.lhead.self{background:var(--cream)}.lhead h1{font-size:20px;margin:0}.lhead .ko{margin:4px 0 0;color:var(--mute)}.note{font-size:14px;margin:8px 0 0;color:var(--ink)}
+.tips{background:var(--card);border-radius:18px;padding:12px 16px;margin:12px 0;box-shadow:var(--shadow)}.tips h3{margin:4px 0;font-size:15px}.tips ul{padding-left:18px;margin:6px 0}.tips li{margin:6px 0;font-size:15px}
+.modes{display:grid;gap:10px}
+.mode{display:flex;flex-direction:column;align-items:flex-start;padding:14px 16px;border-radius:16px;background:var(--card);box-shadow:var(--shadow);text-align:left}.mode b{font-size:17px}.mode span{font-size:13px;color:var(--mute)}
+.hint{color:var(--mute);font-size:14px}
+.cardlist{display:grid;gap:8px}
+.fc{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:8px;background:var(--card);border-radius:14px;padding:10px 12px;box-shadow:var(--shadow)}
+.fc-ko{text-align:left;font-size:20px;font-weight:700}.fc-zh{font-size:13px;padding:6px 10px;border-radius:10px;background:var(--green2)}.fc-m{grid-column:1/-1;color:var(--mute);font-size:15px}
+.fc .btn-slow{grid-row:1;grid-column:3}
+.say{display:flex;gap:10px;justify-content:center;margin:8px 0}
+.btn-audio,.btn-slow{min-width:52px;height:52px;border-radius:16px;background:var(--green);color:#fff;font-size:22px;padding:0 12px}
+.btn-slow{background:var(--green2);color:var(--ink)}
+.btn-audio.sm{min-width:34px;height:34px;font-size:15px;border-radius:10px;padding:0 6px}
+.bigplay .btn-audio{width:96px;height:96px;font-size:40px;border-radius:28px}.bigplay .btn-slow{height:96px;width:64px}
+.top .prog{flex:1}.cnt{font-size:13px;color:var(--mute)}
+.q{padding-bottom:180px}.lbl{font-weight:700;color:var(--green);margin:6px 0}.lbl small{color:var(--mute);font-weight:500}
+.prompt{font-size:18px;margin:10px 0}.prompt.big{font-size:24px;font-weight:700;text-align:center}.prompt.ko{font-size:30px}
+.opts{display:grid;gap:10px;margin-top:14px}.opts.ko .opt{font-size:22px}
+.opt{padding:14px;border-radius:14px;background:var(--card);border:2px solid var(--line);font-size:17px;text-align:center}
+.opt.right{border-color:var(--green);background:var(--green2)}.opt.wrong{border-color:var(--red);background:var(--red2)}
+.built{min-height:64px;border-bottom:2px solid var(--line);margin:14px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:24px}
+.chip{background:var(--green2);border-radius:10px;padding:4px 10px;font-weight:700}
+.tiles{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tile{padding:10px 14px;border-radius:12px;background:var(--card);border:2px solid var(--line);font-size:20px;font-weight:700;box-shadow:0 2px 0 var(--line)}.tile:disabled{opacity:.25}
+.row{display:flex;gap:10px;justify-content:space-between;margin-top:16px}.row>*{flex:1}
+.fb{position:fixed;left:0;right:0;bottom:0;transform:translateY(110%);transition:transform .2s;padding:16px 16px calc(16px + env(safe-area-inset-bottom));border-radius:20px 20px 0 0;max-width:560px;margin:0 auto}
+.fb.on{transform:none}.fb.good{background:var(--green2)}.fb.bad{background:var(--red2)}
+.fb-t{font-weight:800;font-size:18px;margin:0 0 6px}.fb.good .fb-t{color:var(--green)}.fb.bad .fb-t{color:var(--red)}
+.fb-ko{font-size:20px;font-weight:700;margin:4px 0}.fb-zh{margin:0 0 6px}.fb-n{font-size:13px;color:var(--mute);margin:0 0 6px}.fb .primary{width:100%;margin-top:6px}
+.result{text-align:center;padding-top:30px}.medal{font-size:64px}.rs{margin:4px 0;color:var(--mute)}
+.wlist{text-align:left;background:var(--card);border-radius:16px;padding:12px 16px;margin-top:16px}.wlist h3{margin:4px 0 8px;font-size:15px}.wlist p{margin:6px 0}
+.sp{background:var(--card);border-radius:18px;padding:18px;text-align:center;box-shadow:var(--shadow)}.sp-ko{font-size:26px;font-weight:800;margin:4px 0}.sp-zh{color:var(--mute);margin:0 0 8px}
+.steps{text-align:left;color:var(--mute);font-size:14px;margin:8px auto;max-width:260px}
+.rec{width:100%;padding:16px;border-radius:16px;background:var(--red);color:#fff;font-weight:700;font-size:17px;margin-top:8px}
+.heard{margin:12px 0 4px}.score{font-weight:800;font-size:18px}.score.ok{color:var(--green)}.score.mid{color:var(--gold)}.score.low{color:var(--red)}
+.cmp{display:flex;gap:10px;justify-content:center}.cmp .btn-audio{font-size:16px}
+.pager{display:flex;gap:10px;margin-top:14px}.pager button{flex:1;padding:12px;border-radius:14px;background:var(--card);border:1px solid var(--line)}.pager button:last-child{background:var(--green);color:#fff;border:0}.pager button:disabled{opacity:.4}
+.helpb{background:var(--card);border-radius:18px;padding:6px 16px 16px}.helpb h3{font-size:16px;margin:16px 0 6px;color:var(--green)}.helpb li,.helpb p{font-size:15px}.goalset button{padding:10px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,40px);opacity:0;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;transition:.25s;max-width:90vw;z-index:9}#toast.on{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="toast"></div>
+<script>
+/* 课程内容：全部取自《零基础韩国语》第1–16课 PPT（《사랑해요 한국어 1》）。
+   w: 单词 "韩|中"   s: 句子 "韩|中"   p: 听辨组（只听不考意思）
+   q: 选择题 [题干, 正确答案, 干扰项...]（正确答案永远写在第一个，程序会打乱） */
+const LESSONS = [
+{ n:1, ko:"한글 (1)", zh:"韩文(1)：基本元音·辅音", taught:true,
+  tips:[
+   "元音造字原理：天(·)、地(ㅡ)、人(ㅣ)。基本元音6个：ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ",
+   "辅音模仿发音器官。基本辅音10个：ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅎ",
+   "元音开头的音节，前面要写 ㅇ（不发音，只是“占位子”）：아 어 오",
+   "注意：ㅓ 嘴张大、不圆唇；ㅡ 嘴角拉平；ㄹ 舌尖轻轻弹一下；시 ≈ xi"],
+  w:["아이|孩子","오이|黄瓜","우유|牛奶","모자|帽子","나비|蝴蝶","구두|皮鞋","나무|树","허리|腰","바나나|香蕉","라디오|收音机","아버지|爸爸","어머니|妈妈","기자|记者","가수|歌手","부모|父母","도로|道路","지도|地图","호수|湖水"],
+  p:[["아","어"],["오","우"],["으","이"],["나","라"],["마","바"],["사","자"]],
+  q:[
+   ["韩国语的基本语序是？","主语 + 宾语 + 谓语（SOV）","主语 + 谓语 + 宾语（SVO）","谓语 + 主语 + 宾语"],
+   ["关于声调，下列哪句正确？","韩语没有声调，汉语有","韩语和汉语都有声调","韩语有声调，汉语没有"],
+   ["“저는 엄마를 사랑해요”里，“을/를”标记的是？","宾语","主语","话题","地点"],
+   ["创制韩文的人是谁？","世宗大王","李舜臣","太祖","正祖"],
+   ["韩文是哪一年创制的？","1443年","1392年","1592年","1910年"],
+   ["韩文节（한글날）是几月几日？","10月9日","5月5日","1月1日","12月25日"],
+   ["元音开头的音节，前面要写的“占位”辅音是？","ㅇ","ㅎ","ㄴ","ㅁ"],
+   ["基本元音有几个？","6个","4个","8个","10个"],
+   ["基本辅音有几个？","10个","6个","8个","14个"],
+   ["汉字和韩文的共同点是？","都是把字写进一个方块里","都是表音文字","都用声调区分意思"]]
+},
+{ n:2, ko:"한글 (2)", zh:"韩文(2)：复合元音·送气音·紧音", taught:true,
+  tips:[
+   "加一笔 = 加 y：ㅏ→ㅑ  ㅓ→ㅕ  ㅗ→ㅛ  ㅜ→ㅠ",
+   "ㅐ 和 ㅔ 现在读音几乎一样 [e]；ㅒ ㅖ 读 [ye]。시계 读 [시게]",
+   "三兄弟：松音 가 / 送气音 카 / 紧音 까。纸巾测试：动一点 · 大动 · 不动",
+   "送气音 ≈ 拼音 k t p q；紧音：喉咙用力、憋住气"],
+  w:["야구|棒球","휴지|纸巾","요가|瑜伽","여자|女子","해|太阳","얘기|话，故事","세수|洗脸","시계|钟表","개구리|青蛙","코|鼻子","기타|吉他","카메라|相机","치즈|奶酪","커피|咖啡","토끼|兔子","피아노|钢琴","토마토|西红柿","찌개|炖汤","오빠|哥哥（女生称呼）","허리띠|腰带","코끼리|大象","쓰레기|垃圾","기차|火车","요리|料理，做菜","오리|鸭子","우표|邮票","교사|教师","두부|豆腐"],
+  p:[["가","카","까"],["다","타","따"],["바","파","빠"],["자","차","짜"],["사","싸"],["고리","꼬리"],["요리","오리"],["거미","개미"],["보도","포도"],["부리","뿌리"],["타다","따다"],["차다","짜다"],["거기","고기"]],
+  s:["어서 오세요!|欢迎光临！","커피 주세요.|请给我咖啡。","아이스 커피요?|冰咖啡吗？","네! 치즈 케이크도 주세요.|对！也请给我奶酪蛋糕。"],
+  q:[
+   ["“ㅑ”是在哪个元音上加一笔构成的？","ㅏ","ㅓ","ㅗ","ㅜ"],
+   ["现代首尔话里，“ㅐ”和“ㅔ”的发音关系是？","几乎相同","完全不同","只用 ㅐ","只用 ㅔ"],
+   ["纸巾测试：紧音（如“까”）的特点是？","纸巾几乎不动","纸巾大幅摆动","纸巾轻轻摆动"],
+   ["가 · 카 · 까 三者中，送气最强的是？","카","가","까"],
+   ["“기차”的意思是？","火车","汽车","地铁"],
+   ["“시계”的意思是？","钟表","眼镜","手机"],
+   ["“오빠”是谁对谁的称呼？","女生称呼哥哥","男生称呼姐姐","称呼弟弟"]]
+},
+{ n:3, ko:"한글 (3)", zh:"韩文(3)：双元音·收音·连音", taught:true,
+  tips:[
+   "双元音：ㅘ(wa) ㅝ(wo) ㅙ ㅞ ㅚ(都≈we) ㅟ(wi) ㅢ(ui)",
+   "ㅢ 三种读法：词首 의사[의]；辅音后/词中 희망[히망]；“的” 우리의[우리에]",
+   "收音只有7个读音：[k] [n] [t] [l] [m] [p] [ŋ]。옷 · 꽃 的收音都读 [t]",
+   "连音：收音后面是 ㅇ 开头的字，收音“搬家”：음악[으막] 한국어[한구거] 집이[지비]"],
+  w:["사과|苹果","뭐|什么","샤워|淋浴","돼지|猪","웨이터|服务员","회사|公司","귀|耳朵","의자|椅子","키위|猕猴桃","가위|剪刀","의사|医生","책|书","미국|美国","부엌|厨房","돈|钱","신문|报纸","옷|衣服","꽃|花","물|水","딸기|草莓","사람|人","곰|熊","집|家","지갑|钱包","가방|包","빵|面包","냉장고|冰箱",
+     "시청|市厅（地铁站）","동대문|东大门（地铁站）","강남|江南（地铁站）","신촌|新村（地铁站）","잠실|蚕室（地铁站）","명동|明洞（地铁站）","안국|安国（地铁站）","혜화|惠化（地铁站）","광화문|光化门（地铁站）","여의도|汝矣岛（地铁站）","이태원|梨泰院（地铁站）","경복궁|景福宫（地铁站）"],
+  p:[["방","밖"],["곧","공"],["시작","시장"],["얼마","엄마"],["사랑","사람"],["산","상"],["책","채"],["밥","박"],["곰","공"]],
+  q:[
+   ["“와”是由哪两个元音组合而成的？","ㅗ + ㅏ","ㅜ + ㅓ","ㅗ + ㅐ","ㅡ + ㅣ"],
+   ["“의사”（医生）的“의”在词首怎么读？","[의] ui","[이] i","[에] e"],
+   ["收音 ㄱ、ㅋ、ㄲ 都读作哪个音？","[ㄱ] k","[ㅋ]","[ㄲ]","不发音"],
+   ["“옷、꽃”的收音都读作哪个音？","[ㄷ] t","[ㅅ]","[ㅊ]","[ㅈ]"],
+   ["“한국어”的实际发音是？","[한구거]","[한국어]","[한구커]","[항구거]"],
+   ["“음악”的实际发音是？","[으막]","[음악]","[으마]"],
+   ["“있어요”的实际发音是？","[이써요]","[읻어요]","[이서요]"],
+   ["“우리의”（我们的）里的“의”读作？","[에]","[의]","[이]"]]
+},
+{ n:4, ko:"교실 한국어 · 숫자 · 인사", zh:"课堂用语·数字1–10·问候", taught:true,
+  tips:[
+   "老师会说：보세요(看) 읽으세요(读) 들으세요(听) 쓰세요(写) 따라하세요(跟读)",
+   "汉字词数字：일 이 삼 사 오 육 칠 팔 구 십。0 = 영（数学）/ 공（电话号码）",
+   "对要走的人说 안녕히 가세요；对留下的人说 안녕히 계세요",
+   "谢谢：고마워요（一般）· 고맙습니다 · 감사합니다（更礼貌）；对不起：미안해요 · 죄송합니다"],
+  w:["보세요|请看","읽으세요|请读","들으세요|请听","쓰세요|请写","따라하세요|请跟读","이야기하세요|请说说看","앉으세요|请坐","쉬세요|请休息","좋아요|好","알아요|知道","몰라요|不知道",
+     "일|1 · 一","이|2 · 二","삼|3 · 三","사|4 · 四","오|5 · 五","육|6 · 六","칠|7 · 七","팔|8 · 八","구|9 · 九","십|10 · 十","공일공|010（电话号码）","오 층|5楼","팔 번 버스|8路公交车"],
+  s:["안녕하세요?|你好！（早中晚都可以用）","안녕하세요? 반가워요.|你好！很高兴见到你。","만나서 반가워요.|见到你很高兴。（第一次见面）","안녕히 가세요.|请慢走。（对要走的人说）","안녕히 계세요.|再见/请留步。（对留下的人说）","고마워요.|谢谢。","고맙습니다.|谢谢。（更礼貌）","감사합니다.|感谢。","미안해요.|对不起。","죄송합니다.|对不起。（更礼貌）","다시 한번 말해 주세요.|请再说一遍。","전화번호 뭐예요?|你的电话号码是多少？","공일공, 이삼사오, 육칠팔구예요.|010-2345-6789。"],
+  q:[
+   ["第一次见面时应该说什么？","만나서 반가워요","잘 먹겠습니다","안녕히 주무세요","미안합니다"],
+   ["离开的人对留下来的人说什么？","안녕히 계세요","안녕히 가세요","어서 오세요","괜찮아요"],
+   ["“다시 한번 말해 주세요”是什么意思？","请再说一遍","请看书","请写下来","请回答"],
+   ["汉字词数字“칠”是几？","7","6","8","9"],
+   ["“공일공”（电话号码）是哪个数字？","010","101","100","707"],
+   ["“몰라요”是什么意思？","不知道","知道","好","请看"],
+   ["对长辈、陌生人说“对不起”，更礼貌的是？","죄송합니다","미안해요","고마워요"]]
+},
+{ n:5, ko:"저는 중국 사람이에요", zh:"我是中国人：自我介绍", taught:true,
+  tips:[
+   "저는 N이에요/예요 = 我是N。有收音 → 이에요；没有收音 → 예요",
+   "疑问句和陈述句一样，句尾语调上扬 ↗：중국 사람이에요? 回答：네 / 아니요",
+   "国家 + 사람 = ……人：중국 사람、한국 사람",
+   "“씨”：全名或名字 + 씨（링링 씨）。只有姓 + 씨 不礼貌，对自己不能用 씨"],
+  w:["한국|韩国","중국|中国","일본|日本","미국|美国","영국|英国","독일|德国","호주|澳大利亚","인도|印度","프랑스|法国","러시아|俄罗斯","베트남|越南","브라질|巴西","태국|泰国","몽골|蒙古","중국 사람|中国人","한국 사람|韩国人","일본 사람|日本人","미국 사람|美国人","학생|学生","친구|朋友","베이징|北京","상하이|上海","광저우|广州","선전|深圳","청두|成都","시안|西安","하얼빈|哈尔滨","충칭|重庆"],
+  s:["저는 학생이에요.|我是学生。","저는 중국 사람이에요.|我是中国人。","저는 가수예요.|我是歌手。","이름이 뭐예요?|你叫什么名字？","어느 나라 사람이에요?|你是哪国人？","중국 사람이에요?|是中国人吗？","네, 중국 사람이에요.|是的，是中国人。","아니요, 일본 사람이에요.|不，是日本人。","안녕하세요? 저는 민준이에요.|你好！我叫民俊。","링링 씨는 어느 나라 사람이에요?|玲玲你是哪国人？","저는 한국 사람이에요. 반가워요.|我是韩国人。很高兴认识你。","상하이에서 왔어요.|我来自上海。"],
+  q:[
+   ["저는 중국 사람____.","이에요","예요","을","는"],
+   ["저는 리나____.","예요","이에요","이","을"],
+   ["의사____ （是医生）","예요","이에요","가"],
+   ["선생님____ （是老师）","이에요","예요","는"],
+   ["“你是哪国人？”用韩语怎么说？","어느 나라 사람이에요?","이름이 뭐예요?","직업이 뭐예요?","어디에 있어요?"],
+   ["“프랑스”是哪个国家？","法国","英国","德国","俄罗斯"],
+   ["“독일”（獨逸）是哪个国家？","德国","澳大利亚","泰国","日本"],
+   ["“이름이 뭐예요?”是什么意思？","你叫什么名字？","你是哪国人？","你做什么工作？","这是什么？"],
+   ["下面哪个用法不礼貌？","김 씨（只有姓 + 씨）","김태우 씨","태우 씨"]]
+},
+{ n:6, ko:"학생이에요?", zh:"你是学生吗？职业·介绍别人", taught:true,
+  tips:[
+   "N은/는 = 话题（……呢）。有收音 → 은；没有收音 → 는",
+   "N이/가 아니에요 = 不是N。有收音 → 이 아니에요；没有收音 → 가 아니에요",
+   "介绍别人：이쪽은 ○○ 씨예요；长辈：이분은 ○○이에요",
+   "아, 그래요? = 啊，是吗？　저도 = 我也"],
+  w:["학생|学生","선생님|老师","회사원|公司职员","의사|医生","가수|歌手","기자|记者","군인|军人","경찰|警察","요리사|厨师","간호사|护士","변호사|律师","연구원|研究员"],
+  s:["직업이 뭐예요?|你做什么工作？","이쪽은 민준 씨예요.|这位是民俊。","민준 씨는 회사원이에요.|民俊是公司职员。","이분은 우리 선생님이에요.|这位是我们老师。","학생이 아니에요.|不是学生。","의사가 아니에요.|不是医生。","아니요, 일본 사람이 아니에요.|不，不是日本人。","아, 그래요?|啊，是吗？","저도 학생이에요.|我也是学生。","링링 씨, 이쪽은 준호 씨예요.|玲玲，这位是俊浩。","아니요, 학생이 아니에요. 회사원이에요.|不，我不是学生，是公司职员。","서울에서 왔어요.|我来自首尔。"],
+  q:[
+   ["저____ 학생이에요.","는","은","이","를"],
+   ["선생님____ 한국 사람이에요.","은","는","가","를"],
+   ["이쪽____ 케빈 씨예요.","은","는","가"],
+   ["“我不是医生。”用韩语怎么说？","저는 의사가 아니에요.","저는 의사이 아니에요.","저는 의사를 아니에요.","저는 의사예요."],
+   ["저는 학생____ 아니에요.","이","가","은","를"],
+   ["링링 씨는 가수____ 아니에요.","가","이","는"],
+   ["“회사원”是什么意思？","公司职员","研究员","警察","厨师"],
+   ["“간호사”是什么职业？","护士","律师","厨师","记者"],
+   ["“직업이 뭐예요?”是什么意思？","你做什么工作？","你叫什么名字？","你是哪国人？","这是什么？"]]
+},
+{ n:7, ko:"이거는 뭐예요?", zh:"这是什么？物品·有/没有", taught:true,
+  tips:[
+   "이거（离我近）· 그거（离你近）· 저거（离我们都远）",
+   "이거는 뭐예요? → N이에요/예요。不知道怎么说：이거는 한국어로 뭐예요?",
+   "N의 N = N 的 N（의 读[에]，常省略）。我的 = 제，谁的 = 누구",
+   "N이/가 있어요 = 有；N이/가 없어요 = 没有"],
+  w:["책|书","공책|笔记本","볼펜|圆珠笔","지우개|橡皮","필통|笔袋","가방|包","의자|椅子","책상|书桌","시계|钟表","지도|地图","창문|窗户","휴대폰|手机","노트북|笔记本电脑","컴퓨터|电脑","모자|帽子","지갑|钱包","돈|钱","휴지|纸巾","우산|雨伞","거울|镜子","열쇠|钥匙","명함|名片","사진|照片","안경|眼镜","카드|卡","사전|词典","카메라|相机","이거|这个（离我近）","그거|那个（离你近）","저거|那个（远处的）"],
+  s:["이거는 뭐예요?|这是什么？","책이에요.|是书。","저거는 뭐예요? 시계예요.|那是什么？是钟。","이거는 한국어로 뭐예요?|这个用韩语怎么说？","이거는 누구 볼펜이에요?|这是谁的圆珠笔？","네, 제 공책이에요.|是的，是我的笔记本。","저 사람은 누구예요?|那个人是谁？","휴지가 있어요?|有纸巾吗？","네, 있어요.|有。","아니요, 없어요.|没有。","우산이 있어요?|有雨伞吗？","저는 한국 친구가 있어요.|我有韩国朋友。","저는 차가 없어요.|我没有车。","이 가방은 로렌 씨 가방이에요?|这个包是劳伦的包吗？"],
+  q:[
+   ["离我和对方都很远的东西，用哪个词？","저거","이거","그거","뭐"],
+   ["离对方近、离我远的东西，用哪个词？","그거","이거","저거","누구"],
+   ["“이거 뭐예요?”是什么意思？","这是什么？","那是谁的？","有什么？","多少钱？"],
+   ["“我的书”用韩语怎么说？","제 책","책 제","저 책의","제가 책"],
+   ["“我有手机。”用韩语怎么说？","휴대폰이 있어요.","휴대폰이 없어요.","휴대폰이에요.","휴대폰이 아니에요."],
+   ["A: 우산 있어요?  B: 아니요, ____.","없어요","있어요","아니에요","이에요"],
+   ["“누구 가방이에요?”是什么意思？","这是谁的包？","包在哪里？","这是什么包？","有包吗？"]]
+},
+{ n:8, ko:"오렌지 주스 주세요", zh:"请给我橙汁：点饮料", taught:true,
+  tips:[
+   "V-(으)세요 = 请……：去掉 다，有收音 → 으세요（앉으세요）；没有收音 → 세요（보세요）",
+   "N 주세요 = 请给我 N：커피 주세요",
+   "固有词数字：하나 둘 셋 넷 다섯 여섯 일곱 여덟 아홉 열（여덟 读[여덜]）",
+   "顺序：名词 + 数字：아메리카노 둘 주세요（✗ 둘 아메리카노）"],
+  w:["커피|咖啡","아메리카노|美式咖啡","카페라테|拿铁","아이스커피|冰咖啡","홍차|红茶","녹차|绿茶","유자차|柚子茶","오렌지 주스|橙汁","사과 주스|苹果汁","포도 주스|葡萄汁","빵|面包","케이크|蛋糕","쿠키|饼干","샌드위치|三明治","샐러드|沙拉",
+     "하나|1（固有词）","둘|2（固有词）","셋|3（固有词）","넷|4（固有词）","다섯|5（固有词）","여섯|6（固有词）","일곱|7（固有词）","여덟|8（固有词）","아홉|9（固有词）","열|10（固有词）"],
+  s:["여기 앉으세요.|请坐这里。","잠깐만 기다리세요.|请稍等。","책을 읽으세요.|请读书。","커피 주세요.|请给我咖啡。","샐러드 주세요.|请给我沙拉。","어서 오세요. 뭐 드릴까요?|欢迎光临。您要点什么？","포도 주스 있어요?|有葡萄汁吗？","그럼 오렌지 주스 하나 주세요.|那请给我一杯橙汁。","네, 잠깐만 기다리세요.|好的，请稍等。","아메리카노 둘 주세요.|请给我两杯美式咖啡。","빵 둘 주세요.|请给我两个面包。"],
+  q:[
+   ["보다 → ____ （请看）","보세요","보으세요","봐세요"],
+   ["앉다 → ____ （请坐）","앉으세요","앉세요","앉아세요"],
+   ["읽다 → ____ （请读）","읽으세요","읽세요","읽어세요"],
+   ["기다리다 → ____ （请等）","기다리세요","기다리으세요","기다려세요"],
+   ["“请给我两杯美式咖啡”，正确的是？","아메리카노 둘 주세요.","둘 아메리카노 주세요.","아메리카노 이 주세요."],
+   ["“여덟”是几？","8","7","9","6"],
+   ["“뭐 드릴까요?”是什么意思？","您要点什么？","多少钱？","请稍等。"]]
+},
+{ n:9, ko:"비빔밥하고 콜라 주세요", zh:"拌饭和可乐：在餐厅点餐", taught:true,
+  tips:[
+   "汉语：数 + 量 + 名（一瓶可乐）；韩语：名 + 数 + 量（콜라 한 병）",
+   "量词前数字变短：하나→한  둘→두  셋→세  넷→네",
+   "量词：개(个) 병(瓶) 잔(杯) 그릇(碗) 마리(只) 인분(人份，用 일·이·삼)",
+   "N하고 N = N和N（不看收音）。叫服务员：여기요! 更客气：좀"],
+  w:["비빔밥|拌饭","불고기|烤肉","냉면|冷面","김치|泡菜","김밥|紫菜包饭","떡볶이|炒年糕","라면|拉面","밥|米饭","햄버거|汉堡","피자|披萨","스파게티|意大利面","치킨|炸鸡","콜라|可乐","사이다|汽水","맥주|啤酒","소주|烧酒","만두|饺子","반찬|小菜",
+     "빵 한 개|一个面包","콜라 한 병|一瓶可乐","커피 한 잔|一杯咖啡","냉면 한 그릇|一碗冷面","치킨 한 마리|一只炸鸡","불고기 이 인분|两人份烤肉"],
+  s:["비빔밥 두 그릇 주세요.|请给我两碗拌饭。","커피가 몇 잔 있어요?|有几杯咖啡？","세 잔 있어요.|有三杯。","사과 몇 개 있어요?|有几个苹果？","샌드위치하고 주스 주세요.|请给我三明治和果汁。","밥하고 김치 좀 주세요.|请给我米饭和泡菜。","냉면 둘하고 맥주 한 병 주세요.|两份冷面和一瓶啤酒。","여기요!|服务员！（这边！）","물 좀 주세요.|请给我点水。","반찬 좀 더 주세요.|请再给点小菜。","메뉴 좀 주세요.|请给我菜单。","여기 있어요. 뭐 드릴까요?|给您。您要点什么？","비빔밥 두 그릇하고 콜라 한 병 주세요.|两碗拌饭和一瓶可乐。"],
+  q:[
+   ["“一瓶可乐”用韩语怎么说？","콜라 한 병","한 병 콜라","콜라 하나 병","일 병 콜라"],
+   ["“세 잔”是什么意思？","三杯","四杯","三瓶","三碗"],
+   ["커피 ____ 잔 주세요.（两杯）","두","둘","이"],
+   ["냉면 한 ____ 주세요.（一碗）","그릇","병","마리","잔"],
+   ["“有几个苹果？”正确的是？","사과 몇 개 있어요?","사과 몇 있어요?","몇 사과 있어요?"],
+   ["在餐厅叫服务员，可以说？","여기요!","안녕히 계세요!","잠깐만 기다리세요!"],
+   ["“N하고 N”的意思是？","N和N","N的N","N也"]]
+},
+{ n:10, ko:"지금 뭐 해요?", zh:"现在做什么？动词·-아요/어요", taught:true,
+  tips:[
+   "看“다”前面的元音：ㅏ·ㅗ → -아요（살아요）；其他 → -어요（먹어요）；하다 → 해요",
+   "元音缩短：가요 · 봐요 · 와요 · 배워요 · 마셔요 · 가르쳐요 · 기다려요",
+   "N을/를 = 宾语。有收音 → 을（책을）；没有收音 → 를（영화를）",
+   "三个助词：은/는（话题）· 이/가（主语）· 을/를（宾语），都看收音"],
+  w:["자다|睡觉","먹다|吃","마시다|喝","보다|看","읽다|读","사다|买","만나다|见面","배우다|学","가르치다|教","일하다|工作","공부하다|学习","운동하다|运动","노래하다|唱歌","전화하다|打电话","이야기하다|聊天","좋아하다|喜欢",
+     "자요|睡觉（现在时）","먹어요|吃（现在时）","마셔요|喝（现在时）","봐요|看（现在时）","읽어요|读（现在时）","배워요|学（现在时）","공부해요|学习（现在时）","운동해요|运动（现在时）"],
+  s:["지금 뭐 해요?|现在在做什么？","공부해요.|在学习。","양양 씨는 운동해요.|杨杨在运动。","케빈 씨는 지금 자요.|凯文现在在睡觉。","책을 읽어요.|读书。","영화를 봐요.|看电影。","커피를 마셔요.|喝咖啡。","한국어를 배워요.|学韩语。","뭘 좋아해요?|你喜欢什么？","저는 김밥을 먹어요.|我吃紫菜包饭。","링링 씨는 친구가 있어요.|玲玲有朋友。","친구를 만나요.|我在见朋友。","친구하고 같이 이야기해요.|跟朋友一起聊天。","라면을 먹어요.|吃拉面。"],
+  q:[
+   ["먹다 → ____","먹어요","먹아요","먹해요"],
+   ["좋다 → ____","좋아요","좋어요","좋해요"],
+   ["공부하다 → ____","공부해요","공부하아요","공부하어요"],
+   ["보다 → ____","봐요","보어요","봐어요"],
+   ["마시다 → ____","마셔요","마시아요","마사요"],
+   ["배우다 → ____","배워요","배우아요","배와요"],
+   ["영화____ 봐요.","를","을","는"],
+   ["책____ 읽어요.","을","를","가"],
+   ["“지금 뭐 해요?”是什么意思？","现在在做什么？","现在几点？","这是什么？"]]
+},
+{ n:11, ko:"어디에 가요?", zh:"去哪里？地点·에/에서", taught:false,
+  tips:[
+   "N에 가요/와요 = 去/来 N（不看收音）：학교에 가요",
+   "N에서 V = 在 N 做……：도서관에서 공부해요",
+   "에 → 去/来的目的地；에서 → 做事情的地方",
+   "여기（这里）· 거기（那里，离你近）· 저기（那边）· 어디（哪里）"],
+  w:["학교|学校","집|家","회사|公司","식당|餐厅","커피숍|咖啡馆","공원|公园","시장|市场","백화점|百货商店","서점|书店","은행|银行","도서관|图书馆","대사관|大使馆","병원|医院","공항|机场","극장|电影院","화장실|洗手间","여기|这里","거기|那里（离你近）","저기|那边（都远）","어디|哪里"],
+  s:["어디에 가요?|你去哪里？","학교에 가요.|去学校。","커피숍에 가요.|去咖啡馆。","집에 가요.|回家。","친구가 오늘 한국에 와요.|朋友今天来韩国。","도서관에서 뭐 해요?|在图书馆做什么？","도서관에서 숙제를 해요.|在图书馆写作业。","공원에서 친구를 만나요.|在公园见朋友。","저는 회사에서 일해요.|我在公司工作。","어디에서 밥을 먹어요?|在哪里吃饭？","식당에서 친구하고 밥을 먹어요.|在餐厅和朋友吃饭。","저는 집에서 쉬어요.|我在家休息。","극장에서 영화를 봐요.|在电影院看电影。"],
+  q:[
+   ["학교____ 가요.","에","에서","를"],
+   ["학교____ 한국어를 배워요.","에서","에","를"],
+   ["시장____ 과일을 사요.","에서","에","는"],
+   ["내일 친구가 우리 집____ 와요.","에","에서","을"],
+   ["극장____ 영화를 봐요.","에서","에","가"],
+   ["“화장실”是什么意思？","洗手间","化妆品店","厨房"],
+   ["“병원”是什么意思？","医院","病房","银行"],
+   ["“공항”是什么意思？","机场","公园","港口"]]
+},
+{ n:12, ko:"뭐가 맛있어요? · 얼마예요?", zh:"什么好吃？多少钱？购物", taught:false,
+  tips:[
+   "形容词也用 -아요/어요，不加 이에요：김치가 맛있어요（✗ 맛있이에요）",
+   "안 + A/V = 不……：안 비싸요。하다 动词：운동 안 해요（✗ 안 운동해요）",
+   "N도 = N也……，代替 은/는、이/가、을/를：저도、귤도",
+   "钱：십 백 천 만（和汉语一样以万为单位），但 一万/一百/一千 不说 일：만 원 · 백 원 · 천 원"],
+  w:["싸다|便宜","비싸다|贵","맛있다|好吃","맛없다|难吃","재미있다|有趣","재미없다|无聊","많다|多","좋다|好","따뜻하다|温暖","시원하다|凉快","복잡하다|拥挤","친절하다|亲切",
+     "바나나|香蕉","딸기|草莓","귤|橘子","수박|西瓜","오이|黄瓜","당근|胡萝卜","감자|土豆","달걀|鸡蛋","비누|肥皂","샴푸|洗发水","칫솔|牙刷","치약|牙膏",
+     "백|百","천|千","만|万","만 원|一万韩元","삼만 오천 원|35,000韩元","팔천 원|8,000韩元"],
+  s:["뭐가 맛있어요?|什么好吃？","김밥이 맛있어요.|紫菜包饭好吃。","명동이 복잡해요.|明洞人很多。","선생님이 친절해요.|老师很亲切。","아니요, 안 비싸요.|不，不贵。","오늘 학교에 안 가요.|今天不去学校。","지금 운동 안 해요.|现在不运动。","사과가 맛있어요. 귤도 맛있어요.|苹果好吃，橘子也好吃。","저도 커피를 좋아해요.|我也喜欢咖啡。","사과는 얼마예요?|苹果多少钱？","한 개에 천오백 원이에요.|一个一千五百韩元。","모두 얼마예요?|一共多少钱？","너무 비싸요. 좀 깎아 주세요.|太贵了，便宜一点吧。","그럼, 그거 주세요.|那就要那个吧。"],
+  q:[
+   ["“紫菜包饭好吃”，正确的是？","김밥이 맛있어요.","김밥이 맛있이에요.","김밥이 맛있예요."],
+   ["“现在不运动”，正确的是？","지금 운동 안 해요.","지금 안 운동해요.","지금 운동해요 안."],
+   ["저는 학생이에요. 양양 씨____ 학생이에요.（也）","도","는","하고"],
+   ["10,000원 怎么读？","만 원","일만 원","십천 원"],
+   ["35,000원 怎么读？","삼만 오천 원","삼십오천 원","삼만 오백 원"],
+   ["8,000원 怎么读？","팔천 원","팔백 원","팔만 원"],
+   ["“얼마예요?”是什么意思？","多少钱？","几个？","几点？"]]
+},
+{ n:13, ko:"지금 몇 시예요?", zh:"现在几点？时间·星期", taught:false,
+  tips:[
+   "“点”用固有词：한 시 · 두 시 · 세 시 · 열두 시；“分”用汉字词：십 분 · 삼십 분(=반)",
+   "星期：월 화 수 목 금 토 일 + 요일（月火水木金土日）",
+   "时间 + 에：여덟 시에 · 토요일에；오늘 · 내일 · 어제 · 지금 · 매일 不加 에",
+   "V1-고 V2 = 做完 V1 再做 V2：저녁을 먹고 숙제를 해요"],
+  w:["한 시|1点","두 시|2点","세 시|3点","네 시|4点","다섯 시|5点","열두 시|12点","십 분|10分","반|半（30分）","오전|上午","오후|下午",
+     "월요일|星期一","화요일|星期二","수요일|星期三","목요일|星期四","금요일|星期五","토요일|星期六","일요일|星期日","주말|周末",
+     "아침|早上；早饭","점심|中午；午饭","저녁|晚上；晚饭","오늘|今天","내일|明天","어제|昨天","매일|每天","보통|一般"],
+  s:["지금 몇 시예요?|现在几点？","무슨 요일이에요?|星期几？","몇 시에 자요?|几点睡觉？","열두 시에 자요.|十二点睡觉。","무슨 요일에 한국어를 배워요?|星期几学韩语？","수요일에 배워요.|星期三学。","저는 여덟 시 반에 학교에 와요.|我八点半来学校。","저녁에 보통 뭐 해요?|晚上一般做什么？","저녁을 먹고 숙제를 해요.|吃完晚饭写作业。","아침에 커피를 마시고 회사에 가요.|早上喝完咖啡去公司。","케빈 씨는 운동하고 샤워해요.|凯文运动后洗澡。","화요일하고 금요일에 배워요.|星期二和星期五学。"],
+  q:[
+   ["1:00 怎么读？","한 시","일 시","하나 시"],
+   ["“分”用哪套数字？","汉字词数字（일 이 삼）","固有词数字（하나 둘 셋）"],
+   ["9:53 怎么读？","아홉 시 오십삼 분","구 시 오십삼 분","아홉 시 다섯셋 분"],
+   ["6:30 也可以说？","여섯 시 반","육 시 반","여섯 시 셋"],
+   ["“목요일”是星期几？","星期四","星期三","星期五","星期二"],
+   ["下面哪个后面不加 에？","오늘","여덟 시","토요일"],
+   ["“吃完晚饭写作业”，正确的是？","저녁을 먹고 숙제를 해요.","저녁을 먹어요고 숙제를 해요.","숙제를 하고 저녁을 먹어요."]]
+},
+{ n:14, ko:"시험이 며칠이에요?", zh:"考试是几号？日期·过去时", taught:false,
+  tips:[
+   "月份：汉字词数字 + 월。注意：6月 유월、10月 시월（不是 육월、십월）",
+   "며칠 = 几号；언제 = 什么时候",
+   "N부터 N까지 = 从N到N：아홉 시부터 열두 시까지",
+   "过去时：-아요→-았어요，-어요→-었어요，해요→했어요。窍门：먹어요 → 먹었어요"],
+  w:["일월|1月","이월|2月","삼월|3月","사월|4月","오월|5月","유월|6月","칠월|7月","팔월|8月","구월|9月","시월|10月","십일월|11月","십이월|12月","며칠|几号","언제|什么时候","시험|考试","방학|放假","회의|会议","생일|生日","약속|约会","세일|打折",
+     "갔어요|去了","봤어요|看了","먹었어요|吃了","마셨어요|喝了","배웠어요|学了","공부했어요|学习了","들었어요|听了","걸었어요|走了"],
+  s:["오늘이 며칠이에요?|今天几号？","시험이 며칠이에요?|考试是几号？","일월 십오 일이에요.|一月十五号。","생일이 언제예요?|你的生日是什么时候？","제 생일은 팔월 칠 일이에요.|我的生日是八月七号。","몇 시부터 몇 시까지 한국어를 배워요?|几点到几点学韩语？","언제까지 방학이에요?|放假到什么时候？","어제 뭐 했어요?|昨天做了什么？","영화를 봤어요.|看了电影。","친구를 만났어요.|见了朋友。","어제 음악을 들었어요.|昨天听了音乐。","친구하고 파티를 했어요.|和朋友开了派对。","가방하고 꽃을 받았어요.|收到了包和花。"],
+  q:[
+   ["6月 怎么说？","유월","육월","여섯월"],
+   ["10月 怎么说？","시월","십월","열월"],
+   ["가다 → 过去时","갔어요","가었어요","가했어요"],
+   ["먹다 → 过去时","먹었어요","먹았어요","먹했어요"],
+   ["공부하다 → 过去时","공부했어요","공부하았어요","공부했요"],
+   ["듣다（听）→ 过去时","들었어요","듣었어요","듣았어요"],
+   ["“从九点到十二点”","아홉 시부터 열두 시까지","아홉 시까지 열두 시부터","아홉 시에서 열두 시에"],
+   ["“생일이 언제예요?”是什么意思？","你的生日是什么时候？","今天几号？","考试是几号？"]]
+},
+{ n:15, ko:"오늘 날씨가 추워요", zh:"今天很冷：天气·建议", taught:false,
+  tips:[
+   "ㅂ 不规则：收音 ㅂ + 元音 → 우：춥다 → 추워요（过去：추웠어요）",
+   "N이/가 어때요? = N 怎么样？",
+   "V-(으)ㄹ까요? = 一起……吧？没有收音 → ㄹ까요（갈까요）；有收音 → 을까요（먹을까요）",
+   "回答：네, 좋아요.（好）/ 미안해요. 시간이 없어요.（对不起，没时间）"],
+  w:["맑다|晴","흐리다|阴","비가 오다|下雨","눈이 오다|下雪","덥다|热","춥다|冷","따뜻하다|暖和","시원하다|凉快","봄|春","여름|夏","가을|秋","겨울|冬",
+     "더워요|热","추워요|冷","어려워요|难","쉬워요|容易","무거워요|重","가벼워요|轻","매워요|辣","귀여워요|可爱","날씨|天气"],
+  s:["오늘 날씨가 어때요?|今天天气怎么样？","아주 추워요.|很冷。","이 책이 어때요?|这本书怎么样？","아주 재미있어요.|非常有意思。","김치가 어때요? 좀 매워요.|泡菜怎么样？有点辣。","우리 같이 영화를 볼까요?|我们一起看电影吧？","네, 좋아요.|好啊。","몇 시에 만날까요?|几点见面？","점심에 같이 비빔밥을 먹을까요?|中午一起吃拌饭吧？","미안해요. 약속이 있어요.|对不起，我有约了。","오늘은 날씨가 너무 추워요.|今天天气太冷了。","한 시에 학교 앞에서 만나요.|一点在学校前面见吧。"],
+  q:[
+   ["춥다 → ____","추워요","춥어요","추어요"],
+   ["덥다 → ____","더워요","덥어요","더와요"],
+   ["맵다 → ____","매워요","맵어요","매와요"],
+   ["가다 → 一起去吧？","갈까요?","가을까요?","갈래요까?"],
+   ["먹다 → 一起吃吧？","먹을까요?","먹ㄹ까요?","먹까요?"],
+   ["“가을”是哪个季节？","秋","春","夏","冬"],
+   ["“흐려요”是什么天气？","阴","晴","下雨","下雪"],
+   ["“오늘 날씨가 어때요?”是什么意思？","今天天气怎么样？","今天几号？","今天星期几？"]]
+},
+{ n:16, ko:"어디에 있어요? · 총정리", zh:"在哪里？位置·方向·总复习", taught:false,
+  tips:[
+   "方位词和汉语顺序一样：名词 + 方位词。책상 위 = 桌子上，학교 앞 = 学校前面",
+   "N이/가 (地点)에 있어요 = N 在（某处）。第7课 있어요 = 有，这里 = 在",
+   "N(으)로 가세요 = 往N走。有收音 → 으로（앞으로）；没有收音/ㄹ → 로（이쪽으로）",
+   "왼쪽 左 · 오른쪽 右 · 쭉 一直 · 근처 附近"],
+  w:["위|上","아래|下","밑|下面","앞|前","뒤|后","안|里","밖|外","옆|旁边","침대|床","옷장|衣柜","책장|书柜","쓰레기통|垃圾桶","냉장고|冰箱","세탁기|洗衣机","에어컨|空调","전자레인지|微波炉","왼쪽|左边","오른쪽|右边","쭉|一直","근처|附近","책상 위|书桌上","문 옆|门旁边","학교 앞|学校前面"],
+  s:["옷장이 어디에 있어요?|衣柜在哪里？","문 옆에 있어요.|在门旁边。","지갑이 책상 위에 있어요.|钱包在书桌上。","아니요, 집에 없어요. 학교에 있어요.|不在家，在学校。","이 근처에 지하철역이 있어요?|这附近有地铁站吗？","네, 이쪽으로 쭉 가세요.|有，往这边一直走。","왼쪽으로 가세요.|请往左走。","앞으로 쭉 가세요.|请一直往前走。","침대가 몇 층에 있어요?|床在几楼？","칠 층에 있어요.|在七楼。","화장실은 어디에 있어요?|洗手间在哪里？","엘리베이터 옆에 있어요.|在电梯旁边。","방에 뭐가 있어요?|房间里有什么？","침대하고 책상이 있어요.|有床和书桌。"],
+  q:[
+   ["“桌子上”用韩语怎么说？","책상 위","위 책상","책상 밑"],
+   ["“옆”是什么意思？","旁边","前面","后面","里面"],
+   ["“请往左走”","왼쪽으로 가세요.","왼쪽에 가세요.","왼쪽에서 가세요."],
+   ["앞____ 쭉 가세요.","으로","로","에서"],
+   ["이쪽____ 쭉 가세요.","로","으로","에서"],
+   ["“钱包在书桌上”","지갑이 책상 위에 있어요.","지갑이 책상 위에서 있어요.","지갑이 위 책상에 있어요."],
+   ["“근처”是什么意思？","附近","一直","右边"]]
+}
+];
+
+</script>
+<script>
+/* ===== 韩语每日练 · 应用逻辑 ===== */
+(function(){
+"use strict";
+const $ = (s, r=document) => r.querySelector(s);
+const app = $("#app");
+new MutationObserver(()=>window.scrollTo(0,0)).observe(app,{childList:true});
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const shuffle = a => { a = a.slice(); for (let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; };
+const pick = (a,n) => shuffle(a).slice(0,n);
+const today = () => { const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); };
+const dayNum = s => Math.floor(new Date(s+"T00:00:00").getTime()/86400000);
+const addDays = (s,n) => { const d=new Date(s+"T00:00:00"); d.setDate(d.getDate()+n); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); };
+const isHangulOnly = s => /^[가-힣]+$/.test(s);
+
+/* ---------- 存储 ---------- */
+const KEY = "kor-daily-v1";
+let S = { xp:0, streak:0, best:0, last:"", days:{}, srs:{}, lessons:{}, goal:30, tts:0.85 };
+try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(S, JSON.parse(raw)); } catch(e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e) {} };
+
+/* ---------- 题库 ---------- */
+const ITEMS = {}; const BY_LESSON = {};
+for (const L of LESSONS) {
+  const list = BY_LESSON[L.n] = [];
+  (L.w||[]).forEach((x,i)=>{ const [ko,zh]=x.split("|"); list.push(ITEMS["L"+L.n+"w"+i]={id:"L"+L.n+"w"+i,k:"w",ko,zh,L:L.n}); });
+  (L.s||[]).forEach((x,i)=>{ const [ko,zh]=x.split("|"); list.push(ITEMS["L"+L.n+"s"+i]={id:"L"+L.n+"s"+i,k:"s",ko,zh,L:L.n}); });
+  (L.p||[]).forEach((x,i)=>{ list.push(ITEMS["L"+L.n+"p"+i]={id:"L"+L.n+"p"+i,k:"p",opts:x,L:L.n}); });
+  (L.q||[]).forEach((x,i)=>{ list.push(ITEMS["L"+L.n+"q"+i]={id:"L"+L.n+"q"+i,k:"q",q:x[0],a:x[1],d:x.slice(2),L:L.n}); });
+}
+const lessonOf = n => LESSONS.find(l=>l.n===n);
+const BOX = [0,1,2,4,7,15,30];
+
+/* 干扰项：同一课优先，不够时用更早的课（不用没学过的后面的课） */
+function pool(item, kind){
+  let src = BY_LESSON[item.L].filter(x=>x.k===kind && x.id!==item.id);
+  if (src.length < 6) for (let n=item.L-1; n>=1 && src.length<12; n--) src = src.concat(BY_LESSON[n].filter(x=>x.k===kind));
+  return src;
+}
+function distract(item, kind, field, n){
+  const seen = new Set([item[field]]); const out = [];
+  for (const x of shuffle(pool(item, kind))) { if (!seen.has(x[field])) { seen.add(x[field]); out.push(x[field]); } if (out.length>=n) break; }
+  return out;
+}
+
+/* 把一个条目变成一道题 */
+function makeQ(item){
+  if (item.k==="q") return {item, type:"mcq", prompt:item.q, opts:shuffle([item.a,...item.d]), ans:item.a};
+  if (item.k==="p") { const t = item.opts[Math.floor(Math.random()*item.opts.length)]; return {item, type:"pair", say:t, opts:item.opts.slice(), ans:t}; }
+  if (item.k==="w") {
+    const types = ["listen","ko2zh","zh2ko"];
+    if (isHangulOnly(item.ko) && item.ko.length>=2) types.push("spell");
+    const t = types[Math.floor(Math.random()*types.length)];
+    if (t==="listen") return {item,type:"listen",say:item.ko,opts:shuffle([item.ko,...distract(item,"w","ko",3)]),ans:item.ko};
+    if (t==="ko2zh") return {item,type:"ko2zh",say:item.ko,opts:shuffle([item.zh,...distract(item,"w","zh",3)]),ans:item.zh};
+    if (t==="zh2ko") return {item,type:"zh2ko",opts:shuffle([item.ko,...distract(item,"w","ko",3)]),ans:item.ko};
+    // 听音拼词：音节块
+    const syl = [...item.ko]; const extra = [];
+    for (const w of shuffle(pool(item,"w"))) { for (const c of w.ko) if (/[가-힣]/.test(c) && !syl.includes(c) && !extra.includes(c)) extra.push(c); if (extra.length>=3) break; }
+    return {item,type:"spell",say:item.ko,tiles:shuffle([...syl,...extra.slice(0,Math.max(2,4-syl.length+2))]),ans:item.ko};
+  }
+  // 句子
+  const chunks = item.ko.split(" ");
+  const types = ["listen2zh","zh2ko"]; if (chunks.length>=3) types.push("order","order");
+  const t = types[Math.floor(Math.random()*types.length)];
+  if (t==="order") return {item,type:"order",say:item.ko,tiles:shuffle(chunks.map((c,i)=>({c,i}))),ans:item.ko};
+  if (t==="listen2zh") return {item,type:"listen2zh",say:item.ko,opts:shuffle([item.zh,...distract(item,"s","zh",3)]),ans:item.zh};
+  return {item,type:"zh2ko",opts:shuffle([item.ko,...distract(item,"s","ko",3)]),ans:item.ko};
+}
+
+/* 选题：优先到期的、没做过的 */
+function chooseItems(lessons, n){
+  const t = dayNum(today());
+  const all = lessons.flatMap(l=>BY_LESSON[l]);
+  const due = [], fresh = [], rest = [];
+  for (const it of all) { const r=S.srs[it.id]; if (!r) fresh.push(it); else if (dayNum(r.due)<=t) due.push(it); else rest.push(it); }
+  let out = shuffle(due).slice(0, Math.ceil(n*0.6));
+  out = out.concat(shuffle(fresh).slice(0, n-out.length));
+  if (out.length<n) out = out.concat(shuffle(rest).slice(0, n-out.length));
+  return shuffle(out);
+}
+function dueCount(lessons){
+  const t = dayNum(today());
+  return lessons.flatMap(l=>BY_LESSON[l]).filter(it=>{const r=S.srs[it.id]; return r && dayNum(r.due)<=t;}).length;
+}
+function studiedLessons(){ return LESSONS.filter(l=>S.lessons[l.n]).map(l=>l.n); }
+function mastered(n){ const a=BY_LESSON[n]; return a.filter(it=>S.srs[it.id] && S.srs[it.id].b>=3).length/a.length; }
+
+function grade(item, ok){
+  const r = S.srs[item.id] || {b:0,due:today()};
+  if (ok) { r.b = Math.min(r.b+1, BOX.length-1); r.due = addDays(today(), BOX[r.b]); }
+  else { r.b = 0; r.due = today(); }
+  S.srs[item.id] = r;
+}
+function finishDay(xp){
+  const d = today();
+  S.xp += xp; S.days[d] = (S.days[d]||0) + xp;
+  if (S.last !== d) { S.streak = (S.last && dayNum(d)-dayNum(S.last)===1) ? S.streak+1 : 1; S.last = d; }
+  S.best = Math.max(S.best, S.streak);
+  save();
+}
+function liveStreak(){ if (!S.last) return 0; const gap = dayNum(today())-dayNum(S.last); return gap<=1 ? S.streak : 0; }
+
+/* ---------- 语音 ---------- */
+let KO_VOICE = null;
+const hasTTS = "speechSynthesis" in window;
+function loadVoices(){ if(!hasTTS) return; const v = speechSynthesis.getVoices(); KO_VOICE = v.find(x=>/^ko/i.test(x.lang) && /google|yuna|nara|heami|sunhi/i.test(x.name)) || v.find(x=>/^ko/i.test(x.lang)) || null; }
+if (hasTTS) { loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
+function speak(text, slow){
+  if (!hasTTS) { toast("这个浏览器不能播放声音，请用 Chrome 或 Safari 打开"); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text.replace(/_+/g," "));
+  u.lang = "ko-KR"; if (KO_VOICE) u.voice = KO_VOICE;
+  u.rate = slow ? 0.55 : S.tts;
+  speechSynthesis.speak(u);
+}
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+/* ---------- 小组件 ---------- */
+let toastT;
+function toast(msg){ let t=$("#toast"); t.textContent=msg; t.classList.add("on"); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove("on"),2600); }
+const audioBtns = say => `<div class="say"><button class="btn-audio" data-say="${esc(say)}" aria-label="播放">🔊</button><button class="btn-slow" data-slow="${esc(say)}" aria-label="慢速">🐢</button></div>`;
+document.addEventListener("click", e=>{
+  const a = e.target.closest("[data-say]"); if (a) speak(a.dataset.say,false);
+  const b = e.target.closest("[data-slow]"); if (b) speak(b.dataset.slow,true);
+});
+
+/* ---------- 首页 ---------- */
+function home(){
+  speechSynthesis && hasTTS && speechSynthesis.cancel();
+  const st = liveStreak(); const todayXP = S.days[today()]||0;
+  const pct = Math.min(100, Math.round(todayXP/S.goal*100));
+  const studied = studiedLessons();
+  const due = dueCount(studied.length?studied:[1,2,3,4,5,6,7,8,9,10]);
+  const warn = !hasTTS ? `<div class="warn">⚠ 这个浏览器不能播放韩语声音。如果在微信里打开，请点右上角 “···” → 用浏览器打开。</div>`
+            : (!KO_VOICE ? `<div class="warn" id="vw">⚠ 还没有找到韩语语音。点一下 🔊 试试；如果没有声音，请用 Chrome（安卓）或 Safari（苹果）打开。</div>` : "");
+  app.innerHTML = `
+  <header class="top"><div class="brand">韩语每日练<small>매일 한국어</small></div><button class="ghost" id="help">使用方法</button></header>
+  ${warn}
+  <section class="hero">
+    <div class="stat"><b>🔥 ${st}</b><span>连续天数</span></div>
+    <div class="stat"><b>⭐ ${S.xp}</b><span>总分</span></div>
+    <div class="goal"><div class="goalbar"><i style="width:${pct}%"></i></div><span>今天 ${todayXP} / ${S.goal} 分</span></div>
+  </section>
+  <section class="big">
+    <button class="cta" id="daily"><b>今日复习</b><span>${due ? due+" 个到期复习 + 新题" : "10 道题 · 约 3 分钟"}</span></button>
+    <button class="cta alt" id="exam"><b>第1–10课 总复习</b><span>考试准备 · 15 道题</span></button>
+  </section>
+  <h2 class="sec">第1–10课 <small>课上学过</small></h2>
+  <div class="grid">${LESSONS.filter(l=>l.taught).map(card).join("")}</div>
+  <h2 class="sec">第11–16课 <small>自学 · 教材后半部分（课上没学）</small></h2>
+  <div class="grid">${LESSONS.filter(l=>!l.taught).map(card).join("")}</div>
+  <footer class="foot">内容来自课堂 PPT（《사랑해요 한국어 1》）· 学习记录只保存在这台手机里</footer>`;
+  $("#daily").onclick = ()=>{ const ls = studied.length?studied:[1,2,3,4,5,6,7,8,9,10]; quiz(chooseItems(ls,10),"今日复习"); };
+  $("#exam").onclick = ()=> quiz(chooseItems([1,2,3,4,5,6,7,8,9,10],15),"第1–10课 总复习");
+  $("#help").onclick = help;
+  app.querySelectorAll("[data-lesson]").forEach(b=>b.onclick=()=>lesson(+b.dataset.lesson));
+}
+function card(l){
+  const m = Math.round(mastered(l.n)*100);
+  return `<button class="lcard ${l.taught?"":"self"}" data-lesson="${l.n}"><span class="num">${l.n}</span><span class="t">${esc(l.zh)}</span><span class="k">${esc(l.ko)}</span><span class="bar"><i style="width:${m}%"></i></span></button>`;
+}
+
+/* ---------- 课程页 ---------- */
+function lesson(n){
+  const l = lessonOf(n); const items = BY_LESSON[n];
+  const nw = items.filter(x=>x.k==="w").length, ns = items.filter(x=>x.k==="s").length;
+  app.innerHTML = `
+  <header class="top"><button class="ghost" id="back">← 返回</button><div class="brand sm">第${n}课</div><span></span></header>
+  <section class="lhead ${l.taught?"":"self"}"><h1>${esc(l.zh)}</h1><p class="ko">${esc(l.ko)}</p>${l.taught?"":`<p class="note">这一课课上没有学。可以照着教材自学，先看下面的要点再练习。</p>`}</section>
+  <section class="tips"><h3>本课要点</h3><ul>${l.tips.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></section>
+  <section class="modes">
+    <button class="mode" id="m-quiz"><b>✏️ 练习</b><span>听力 · 选择 · 拼写 · 排句子（10题）</span></button>
+    <button class="mode" id="m-cards"><b>🃏 单词卡</b><span>${nw} 个单词${ns?" · "+ns+" 个句子":""}，点一下听发音</span></button>
+    <button class="mode" id="m-speak"><b>🎤 跟读</b><span>听 → 跟着说 → 录音对比</span></button>
+  </section>`;
+  $("#back").onclick = home;
+  $("#m-quiz").onclick = ()=>{ S.lessons[n]=1; save(); quiz(chooseItems([n],10),"第"+n+"课 练习", n); };
+  $("#m-cards").onclick = ()=>{ S.lessons[n]=1; save(); cards(n); };
+  $("#m-speak").onclick = ()=>{ S.lessons[n]=1; save(); speakMode(n); };
+}
+
+/* ---------- 单词卡 ---------- */
+function cards(n){
+  const list = BY_LESSON[n].filter(x=>x.k==="w"||x.k==="s");
+  app.innerHTML = `<header class="top"><button class="ghost" id="back">← 返回</button><div class="brand sm">第${n}课 单词卡</div><span></span></header>
+  <p class="hint">点卡片听发音，点 “中文” 看意思。</p>
+  <div class="cardlist">${list.map(x=>`<div class="fc"><button class="fc-ko" data-say="${esc(x.ko)}">${esc(x.ko)}</button><button class="fc-zh">中文</button><span class="fc-m" hidden>${esc(x.zh)}</span><button class="btn-slow" data-slow="${esc(x.ko)}">🐢</button></div>`).join("")}</div>`;
+  $("#back").onclick = ()=>lesson(n);
+  app.querySelectorAll(".fc-zh").forEach(b=>b.onclick=()=>{ const m=b.nextElementSibling; m.hidden=!m.hidden; b.hidden=!m.hidden?true:false; });
+}
+
+/* ---------- 跟读 ---------- */
+function speakMode(n){
+  let list = BY_LESSON[n].filter(x=>x.k==="s"); if (list.length<4) list = list.concat(BY_LESSON[n].filter(x=>x.k==="w").slice(0,12));
+  let i = 0;
+  const norm = s => s.replace(/[\s.,!?·~]/g,"");
+  function sim(a,b){ a=norm(a); b=norm(b); if(!a||!b) return 0; const m=[...Array(a.length+1)].map((_,i)=>[i,...Array(b.length).fill(0)]); for(let j=1;j<=b.length;j++) m[0][j]=j; for(let x=1;x<=a.length;x++) for(let y=1;y<=b.length;y++) m[x][y]=Math.min(m[x-1][y]+1,m[x][y-1]+1,m[x-1][y-1]+(a[x-1]===b[y-1]?0:1)); return Math.max(0,1-m[a.length][b.length]/Math.max(a.length,b.length)); }
+  let rec=null, chunks=[], url=null;
+  function draw(){
+    const it = list[i];
+    app.innerHTML = `<header class="top"><button class="ghost" id="back">← 返回</button><div class="brand sm">跟读 ${i+1}/${list.length}</div><span></span></header>
+    <section class="sp"><p class="sp-ko">${esc(it.ko)}</p><p class="sp-zh">${esc(it.zh)}</p>${audioBtns(it.ko)}
+      <ol class="steps"><li>听两遍</li><li>大声跟着说三遍</li><li>录音，和原音比一比</li></ol>
+      <button class="rec" id="rec">🎤 按一下开始录音</button>
+      <div id="res"></div></section>
+    <nav class="pager"><button id="prev" ${i?"":"disabled"}>上一个</button><button id="next">${i<list.length-1?"下一个":"完成"}</button></nav>`;
+    $("#back").onclick = ()=>{ stop(); lesson(n); };
+    $("#prev").onclick = ()=>{ stop(); i--; draw(); };
+    $("#next").onclick = ()=>{ stop(); if(i<list.length-1){i++;draw();} else { finishDay(5); toast("跟读完成 +5 分"); lesson(n);} };
+    $("#rec").onclick = ()=> record(it);
+  }
+  function stop(){ try{ rec && rec.state==="recording" && rec.stop(); }catch(e){} }
+  async function record(it){
+    const res = $("#res"), btn = $("#rec");
+    if (SR) { // 语音识别（Chrome 安卓、Safari）
+      const r = new SR(); r.lang="ko-KR"; r.interimResults=false; r.maxAlternatives=3;
+      btn.textContent="🔴 请说……"; btn.disabled=true;
+      r.onresult = e => { const alts=[...e.results[0]].map(x=>x.transcript); const best=Math.max(...alts.map(a=>sim(a,it.ko))); const p=Math.round(best*100);
+        res.innerHTML = `<p class="heard">听到：<b>${esc(alts[0])}</b></p><p class="score ${p>=80?"ok":p>=50?"mid":"low"}">${p>=80?"很好！👏":p>=50?"不错，再试一次":"再听一遍，慢慢说"} · ${p}%</p>`; };
+      r.onerror = ev => { res.innerHTML = `<p class="hint">${ev.error==="not-allowed"?"需要允许使用麦克风。":"没有听清楚，再试一次。"}</p>`; };
+      r.onend = () => { btn.textContent="🎤 再录一次"; btn.disabled=false; };
+      try { r.start(); } catch(e) { btn.disabled=false; }
+      return;
+    }
+    if (!navigator.mediaDevices || !window.MediaRecorder) { res.innerHTML = `<p class="hint">这个浏览器不能录音。请大声跟读三遍就好！</p>`; return; }
+    if (rec && rec.state==="recording") { rec.stop(); return; }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+      chunks=[]; rec = new MediaRecorder(stream);
+      rec.ondataavailable = e=>chunks.push(e.data);
+      rec.onstop = ()=>{ stream.getTracks().forEach(t=>t.stop()); if(url) URL.revokeObjectURL(url); url=URL.createObjectURL(new Blob(chunks,{type:rec.mimeType}));
+        res.innerHTML = `<p class="hint">先听原音，再听你的录音：</p><div class="cmp"><button class="btn-audio" data-say="${esc(it.ko)}">🔊 原音</button><button class="btn-audio" id="mine">▶ 我的录音</button></div>`;
+        $("#mine").onclick = ()=> new Audio(url).play(); btn.textContent="🎤 再录一次"; };
+      rec.start(); btn.textContent="⏹ 说完了，按一下停止";
+    } catch(e) { res.innerHTML = `<p class="hint">需要允许使用麦克风。</p>`; }
+  }
+  draw();
+}
+
+/* ---------- 练习 ---------- */
+const LABEL = { mcq:"选择正确答案", pair:"听一听：是哪一个？", listen:"听一听：是哪个词？", ko2zh:"这是什么意思？", zh2ko:"用韩语怎么说？", spell:"听写：按顺序点音节", order:"排句子：按顺序点词", listen2zh:"听句子，选意思" };
+function quiz(items, title, backLesson){
+  if (!items.length) { toast("没有题目"); return; }
+  let queue = items.map(makeQ), idx = 0, correct = 0, xp = 0; const retried = new Set(); const wrong = [];
+  function draw(){
+    const Q = queue[idx]; const total = queue.length;
+    let body = "";
+    if (Q.type==="mcq") body = `<p class="prompt">${esc(Q.prompt)}</p>`;
+    else if (Q.type==="zh2ko") body = `<p class="prompt big">${esc(Q.item.zh)}</p>`;
+    else if (Q.type==="ko2zh") body = `<p class="prompt big ko">${esc(Q.item.ko)}</p>${audioBtns(Q.say)}`;
+    else body = `<div class="bigplay">${audioBtns(Q.say)}</div>${Q.type==="order"?`<p class="prompt">${esc(Q.item.zh)}</p>`:""}`;
+    let ans = "";
+    if (Q.opts) ans = `<div class="opts ${Q.type==="pair"||Q.type==="listen"||Q.type==="zh2ko"?"ko":""}">${Q.opts.map(o=>`<button class="opt" data-o="${esc(o)}">${esc(o)}</button>`).join("")}</div>`;
+    else ans = `<div class="built" id="built"></div><div class="tiles">${Q.tiles.map((t,j)=>`<button class="tile" data-j="${j}">${esc(typeof t==="string"?t:t.c)}</button>`).join("")}</div><div class="row"><button class="ghost" id="undo">↩ 撤回</button><button class="primary" id="check" disabled>检查</button></div>`;
+    app.innerHTML = `<header class="top"><button class="ghost" id="quit">✕</button><div class="prog"><i style="width:${idx/total*100}%"></i></div><span class="cnt">${idx+1}/${total}</span></header>
+      <section class="q"><p class="lbl">${LABEL[Q.type]} <small>· 第${Q.item.L}课</small></p>${body}${ans}</section><div id="fb" class="fb"></div>`;
+    $("#quit").onclick = ()=> backLesson ? lesson(backLesson) : home();
+    if (Q.say && Q.type!=="ko2zh") setTimeout(()=>speak(Q.say,false), 250);
+    if (Q.opts) app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>answer(b.dataset.o===Q.ans, b));
+    else {
+      const built=[]; const bEl=$("#built"); const chk=$("#check");
+      const redraw=()=>{ bEl.innerHTML = built.map(j=>`<span class="chip">${esc(typeof Q.tiles[j]==="string"?Q.tiles[j]:Q.tiles[j].c)}</span>`).join(Q.type==="order"?" ":""); chk.disabled=!built.length; app.querySelectorAll(".tile").forEach(t=>t.disabled=built.includes(+t.dataset.j)); };
+      app.querySelectorAll(".tile").forEach(t=>t.onclick=()=>{ built.push(+t.dataset.j); redraw(); });
+      $("#undo").onclick=()=>{ built.pop(); redraw(); };
+      chk.onclick=()=>{ const s = built.map(j=>typeof Q.tiles[j]==="string"?Q.tiles[j]:Q.tiles[j].c).join(Q.type==="order"?" ":""); answer(s===Q.ans, null); };
+    }
+  }
+  function answer(ok, btn){
+    const Q = queue[idx];
+    app.querySelectorAll(".opt,.tile,#check,#undo").forEach(b=>b.disabled=true);
+    if (btn) btn.classList.add(ok?"right":"wrong");
+    if (!ok) app.querySelectorAll(".opt").forEach(b=>{ if(b.dataset.o===Q.ans) b.classList.add("right"); });
+    const first = !retried.has(Q.item.id);
+    if (first) { grade(Q.item, ok); if (ok) { correct++; xp+=2; } else wrong.push(Q.item); }
+    else if (ok) xp+=1;
+    if (!ok && first) { retried.add(Q.item.id); queue.push(makeQ(Q.item)); }
+    const info = Q.item.ko ? `<p class="fb-ko">${esc(Q.item.ko)} <button class="btn-audio sm" data-say="${esc(Q.item.ko)}">🔊</button></p><p class="fb-zh">${esc(Q.item.zh)}</p>` : `<p class="fb-zh">正确答案：<b>${esc(Q.ans)}</b></p>`;
+    const fb = $("#fb");
+    fb.className = "fb on "+(ok?"good":"bad");
+    fb.innerHTML = `<p class="fb-t">${ok?"✔ 答对了！":"✘ 再记一下"}</p>${info}${!ok&&first?`<p class="fb-n">这道题等一下会再出现</p>`:""}<button class="primary" id="go">继续</button>`;
+    if (ok && Q.item.ko && Q.type!=="listen" && Q.type!=="pair") speak(Q.item.ko,false);
+    $("#go").onclick = ()=>{ idx++; idx<queue.length ? draw() : result(); };
+  }
+  function result(){
+    finishDay(xp);
+    const n = items.length; const p = Math.round(correct/n*100);
+    app.innerHTML = `<section class="result"><div class="medal">${p>=90?"🏆":p>=70?"🎉":"💪"}</div><h1>${p>=90?"太棒了！":p>=70?"做得好！":"继续加油！"}</h1>
+      <p class="rs">${esc(title)}：答对 ${correct} / ${n}</p><p class="rs">+${xp} 分 · 🔥 连续 ${liveStreak()} 天</p>
+      ${wrong.length?`<div class="wlist"><h3>要再记一下的</h3>${wrong.map(w=>`<p>${w.ko?`<button class="btn-audio sm" data-say="${esc(w.ko)}">🔊</button> <b>${esc(w.ko)}</b> ${esc(w.zh)}`:esc(w.q||w.opts.join(" / "))+(w.a?" → <b>"+esc(w.a)+"</b>":"")}</p>`).join("")}<p class="hint">这些词明天会自动出现在“今日复习”里。</p></div>`:""}
+      <div class="row"><button class="ghost" id="again">再练一次</button><button class="primary" id="home">${backLesson?"回到本课":"回首页"}</button></div></section>`;
+    $("#home").onclick = ()=> backLesson ? lesson(backLesson) : home();
+    $("#again").onclick = ()=> quiz(chooseItems(backLesson?[backLesson]:[...new Set(items.map(x=>x.L))], items.length), title, backLesson);
+  }
+  draw();
+}
+
+/* ---------- 使用方法 ---------- */
+function help(){
+  app.innerHTML = `<header class="top"><button class="ghost" id="back">← 返回</button><div class="brand sm">使用方法</div><span></span></header>
+  <section class="helpb">
+   <h3>每天 5 分钟就够</h3>
+   <ol><li>点 <b>今日复习</b>：做 10 道题。答错的题会在同一轮里再出现一次，明天还会自动复习。</li>
+       <li>每天至少练一次，<b>🔥 连续天数</b> 就会增加。断一天会从 1 重新开始。</li>
+       <li>想复习某一课，就点那一课：<b>练习 · 单词卡 · 跟读</b>。</li></ol>
+   <h3>考试前</h3><p>点 <b>第1–10课 总复习</b>，15 道题随机出自第1–10课。</p>
+   <h3>第11–16课</h3><p>这几课课上没有学，是教材后半部分的自学内容。每课先看“本课要点”，再做练习。</p>
+   <h3>听不到声音？</h3><ul><li>打开手机音量，关掉静音模式（iPhone 侧面开关）。</li><li>在微信里打开时，请点右上角 “···” → <b>在浏览器打开</b>。</li><li>安卓用 Chrome，苹果用 Safari 最好。</li></ul>
+   <h3>放到手机桌面，像 App 一样用</h3><ul><li><b>苹果 Safari：</b>点下面的分享按钮 → “添加到主屏幕”。</li><li><b>安卓 Chrome：</b>点右上角 ⋮ → “添加到主屏幕 / 安装应用”。</li></ul>
+   <h3>每日目标</h3><div class="row goalset">${[20,30,50].map(g=>`<button class="${S.goal===g?"primary":"ghost"}" data-g="${g}">${g} 分</button>`).join("")}</div>
+   <h3>语速</h3><div class="row goalset">${[[0.7,"慢"],[0.85,"普通"],[1,"快"]].map(([r,t])=>`<button class="${S.tts===r?"primary":"ghost"}" data-r="${r}">${t}</button>`).join("")}</div>
+   <p class="hint">学习记录只保存在这台手机的浏览器里，不会上传。换手机或清除浏览器数据，记录会消失。</p>
+   <button class="ghost danger" id="reset">清除我的学习记录</button>
+  </section>`;
+  $("#back").onclick = home;
+  app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{ S.goal=+b.dataset.g; save(); help(); });
+  app.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{ S.tts=+b.dataset.r; save(); speak("안녕하세요?"); help(); });
+  $("#reset").onclick = ()=>{ if (confirm("确定要清除全部学习记录吗？")) { S={ xp:0, streak:0, best:0, last:"", days:{}, srs:{}, lessons:{}, goal:30, tts:0.85 }; save(); home(); } };
+}
+
+home();
+if ("serviceWorker" in navigator && location.protocol==="https:" && !/claude/.test(location.hostname)) {
+  navigator.serviceWorker.register("sw.js").catch(()=>{});
+}
+})();
+
+</script>
+</body>
+</html>
