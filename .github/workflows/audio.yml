@@ -10,13 +10,16 @@ permissions:
 jobs:
   audio:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install edge-tts==7.0.2
-      - run: python tools/make_audio.py
+      - run: python -u tools/make_audio.py
+        timeout-minutes: 25
       - name: Commit audio
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
